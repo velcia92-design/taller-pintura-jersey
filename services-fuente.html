@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVR Services</title>
+<meta name="description" content="Scratch repair, dent removal, bumper repair, respraying, accident repair, alloy wheels and polishing in Jersey. Free written estimates from SVR – Sienna Vehicle Refinishing.">
+<meta name="theme-color" content="#08090b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--ink:#08090b;--ink2:#15181e;--blue:#0a6fe0;--blue-d:#0858b8;--sky:#6db3ff;--bone:#f3f2f0;--muted:#4d5560;--line:#d9dde3;
+--head:'Archivo','Arial Narrow',system-ui,sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.6 var(--body);color:var(--ink);background:var(--bone);padding-bottom:76px;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.04;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:850;font-stretch:115%}
+h2{font-size:clamp(1.9rem,4.8vw,3.2rem);font-weight:800;font-stretch:108%}
+h3{font-size:1.25rem;font-weight:750;line-height:1.2}
+p{margin:0 0 1em;max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font:700 1.05rem var(--body);text-decoration:none;background:var(--blue);color:#fff;border:0;cursor:pointer;transition:transform .25s var(--ease),background .2s}
+.btn:hover{background:var(--blue-d);transform:translateY(-2px)}
+.btn.wa{background:#25d366;color:var(--ink)}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
+.mock{background:#fff3c4;color:#4d3b00;font-size:.8rem;text-align:center;height:28px;line-height:28px;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.note{font-size:.9rem;color:var(--muted)}
+header{position:sticky;top:0;z-index:30;background:rgba(8,9,11,.95);backdrop-filter:blur(8px);color:#fff}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.05rem var(--head)}
+.logo img{width:46px;height:46px;border-radius:8px}
+.hr{display:flex;align-items:center;gap:16px}
+.back{font-weight:700;text-decoration:none;color:var(--sky);white-space:nowrap}
+.hero{background:radial-gradient(900px 500px at 85% 20%,rgba(10,111,224,.35),transparent 70%),var(--ink);color:#fff;padding:72px 0 80px}
+.hero p.sub{font-size:1.2rem;color:#c9d2de;margin:22px 0 28px;max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chips a{padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.08);text-decoration:none;font-weight:600;font-size:.95rem}
+.chips a:hover{background:rgba(255,255,255,.16)}
+section{padding:80px 0}
+.sv{display:grid;gap:26px;align-items:center}
+@media(min-width:880px){.sv{grid-template-columns:1fr 1fr;gap:64px}.sv.rev .ph{order:2}}
+.ph{border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:var(--ink2)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ph:hover img{transform:scale(1.05)}
+.ph.icon{display:grid;place-items:center;color:var(--sky)}
+.ph.icon svg{width:46%;height:46%}
+.sv h2{margin-bottom:14px}
+.sv .lead{color:var(--muted);font-size:1.12rem}
+.facts{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:1rem}
+.facts span{color:var(--muted)}
+.facts b{text-align:right}
+.alt{background:#fff}
+.dark{background:var(--ink);color:#fff}
+.dark p{color:#c9d2de}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:700 1.15rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--blue)}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
+footer a{color:var(--sky)}
+.bar{position:fixed;inset:auto 0 0 0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 10px;background:var(--ink);box-shadow:0 -6px 20px rgba(0,0,0,.3)}
+.bar a{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--blue);color:#fff}
+.bar a:nth-child(2){background:#25d366;color:var(--ink)}
+@media(min-width:880px){.bar{display:none}body{padding-bottom:0}}
+.lang{font:700 .9rem var(--body);color:#fff;background:transparent;border:2px solid rgba(255,255,255,.45);border-radius:999px;padding:6px 14px;cursor:pointer}
+.lang:hover{background:rgba(255,255,255,.12)}
+.js .up{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .up.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .up{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="mock">MOCKUP: example photos and text. Prices and times in [ ] to be confirmed with SVR.</div>
+<header><div class="w">
+ <a class="logo" href="index.html"><img src="images/logo.jpg" alt="SVR logo"><span>Sienna Vehicle Refinishing</span></a>
+ <div class="hr"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><a class="back" href="index.html">← SVR home</a></div>
+</div></header>
+
+<main>
+<div class="hero"><div class="w">
+ <h1>Every repair, done properly.</h1>
+ <p class="sub">From a single scratch to a full respray, here is what we do, how long it usually takes, and what to expect. Not sure which one you need? Send us a photo.</p>
+ <div class="cta"><a class="btn wa" href="https://wa.me/44000000000">WhatsApp your photos</a><a class="btn line" href="index.html#contact">Get a free estimate</a></div>
+ <nav class="chips" aria-label="Services"><a href="#scratch">Scratches</a><a href="#dents">Dents</a><a href="#bumper">Bumpers</a><a href="#respray">Respray</a><a href="#accident">Accident repair</a><a href="#alloys">Alloy wheels</a><a href="#polish">Polishing</a></nav>
+</div></div>
+
+<section id="scratch"><div class="w sv up">
+ <div class="ph"><img src="images/closeup.jpg" alt="Spray gun painting car panels" loading="lazy"></div>
+ <div>
+  <h2>Scratch and scuff repair</h2>
+  <p class="lead">Hedge scrapes, car-park knocks and key marks. If the scratch has not gone through to the metal, it can often be repaired without painting the whole panel.</p>
+  <ul class="facts"><li><span>Usual time</span><b>[1 to 2 days]</b></li><li><span>Price</span><b>From [£000]</b></li><li><span>Best for</span><b>Light to medium scratches</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section id="dents" class="alt"><div class="w sv rev up">
+ <div class="ph"><img src="images/dent.jpg" alt="Technician removing a dent from a door" loading="lazy"></div>
+ <div>
+  <h2>Dent removal</h2>
+  <p class="lead">Where the paint is unbroken, we can often push the dent out from behind with no filler and no respray. Where it is not, we repair the panel properly and repaint it.</p>
+  <ul class="facts"><li><span>Usual time</span><b>[Same day to 2 days]</b></li><li><span>Price</span><b>From [£000]</b></li><li><span>Best for</span><b>Car-park dings, hail, small dents</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section id="bumper"><div class="w sv up">
+ <div class="ph"><img src="images/bumper.jpg" alt="Technician spraying a car bumper" loading="lazy"></div>
+ <div>
+  <h2>Bumper repair</h2>
+  <p class="lead">Cracks, scrapes and splits are repaired, primed and painted to match the rest of the car. If a bumper is beyond saving, we tell you before replacing it.</p>
+  <ul class="facts"><li><span>Usual time</span><b>[2 to 3 days]</b></li><li><span>Price</span><b>From [£000]</b></li><li><span>Best for</span><b>Parking scrapes, minor impacts</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section id="respray" class="dark"><div class="w sv rev up">
+ <div class="ph"><img src="images/booth.jpg" alt="Car bodyshell in a spray booth" loading="lazy"></div>
+ <div>
+  <h2>Full and part respray</h2>
+  <p class="lead" style="color:#c9d2de">Faded, peeling or damaged paint brought back. We match your paint code, test it on a spray-out card, and blend into the next panel so there is no visible join. Everything is cured in the booth.</p>
+  <ul class="facts" style="border-color:#2a3140"><li style="border-color:#2a3140"><span style="color:#8b97a8">Usual time</span><b>[Part: 2 to 4 days. Full: 1 to 2 weeks]</b></li><li style="border-color:#2a3140"><span style="color:#8b97a8">Price</span><b>From [£000]</b></li><li style="border-color:#2a3140"><span style="color:#8b97a8">Best for</span><b>Faded or damaged paint, colour changes</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section id="accident"><div class="w sv up">
+ <div class="ph"><img src="images/spray.jpg" alt="Painter spraying a stripped car in the booth" loading="lazy"></div>
+ <div>
+  <h2>Accident repair</h2>
+  <p class="lead">Panels, doors, wings and the work behind them, repaired and finished to a safe standard. If it was not your fault, we can deal with the other driver’s insurer for you. [Confirm.]</p>
+  <ul class="facts"><li><span>Usual time</span><b>[Depends on damage and parts]</b></li><li><span>Price</span><b>Free written estimate</b></li><li><span>Best for</span><b>Collision damage, insurance work</b></li></ul>
+  <a class="btn" href="index.html#insurance">Not your fault? Read this</a>
+ </div>
+</div></section>
+
+<section id="alloys" class="alt"><div class="w sv rev up">
+ <div class="ph icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="32" cy="32" r="26"/><circle cx="32" cy="32" r="7"/><path d="M32 6v19M32 39v19M6 32h19M39 32h19M14 14l14 14M36 36l14 14M50 14L36 28M28 36L14 50"/></svg></div>
+ <div>
+  <h2>Alloy wheel refurbishment</h2>
+  <p class="lead">Kerb damage, flaking lacquer and worn finishes made good, so the wheels match the rest of the car again. [Confirm that SVR offers this.]</p>
+  <ul class="facts"><li><span>Usual time</span><b>[1 to 2 days]</b></li><li><span>Price</span><b>From [£000] per wheel</b></li><li><span>Best for</span><b>Kerb rash, peeling lacquer</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section id="polish"><div class="w sv up">
+ <div class="ph"><img src="images/polish.jpg" alt="Technician polishing a car panel" loading="lazy"></div>
+ <div>
+  <h2>Polishing and paint correction</h2>
+  <p class="lead">Swirl marks, faded lacquer and light scratches removed by machine, with no paint added. The gloss comes back, and so does the depth of colour.</p>
+  <ul class="facts"><li><span>Usual time</span><b>[1 day]</b></li><li><span>Price</span><b>From [£000]</b></li><li><span>Best for</span><b>Dull or swirled paint</b></li></ul>
+  <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+<section class="alt"><div class="w" style="max-width:820px">
+ <h2 style="margin-bottom:16px">Questions about repairs</h2>
+ <details><summary>How do I know which repair I need?</summary><p>Send us photos or call in. We will tell you plainly, and if a smaller repair will do, we will say so.</p></details>
+ <details><summary>Will the repaired panel match the rest of the car?</summary><p>We match your paint code, test on a card and blend into the next panel. Paint fades over time, so we match what is on your car now.</p></details>
+ <details><summary>Do you work with insurers?</summary><p>[Confirm.] Yes. For a claim that was not your fault, we send the photos and estimate to the insurer.</p></details>
+ <details><summary>Is the estimate free?</summary><p>Yes, with no obligation.</p></details>
+</div></section>
+
+<section class="dark"><div class="w up" style="max-width:820px">
+ <h2>Not sure what you need?</h2>
+ <p style="margin-top:14px;font-size:1.15rem">Send us a photo on WhatsApp. We usually reply within [one working day].</p>
+ <div class="cta"><a class="btn wa" href="https://wa.me/44000000000">WhatsApp your photos</a><a class="btn line" href="index.html#contact">Use the estimate form</a></div>
+</div></section>
+</main>
+
+<footer><div class="w">SVR – Sienna Vehicle Refinishing, Jersey. <a href="index.html">Back to SVR</a> · <a href="index.html#privacy">Privacy notice</a></div></footer>
+<div class="bar"><a href="index.html#contact">Estimate</a><a href="https://wa.me/44000000000">WhatsApp</a></div>
+
+<script>
+(function(){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.up').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
