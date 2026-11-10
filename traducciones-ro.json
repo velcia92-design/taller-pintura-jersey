@@ -166,7 +166,6 @@
  "Who we are": "Cine suntem",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [adresa], Jersey [JE_ ___]. Contact: [email@address].",
  "What we collect": "Ce colectăm",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Doar ce ne trimiți: numele, numărul de telefon, numărul de înmatriculare, datele mașinii, o descriere a avariei și eventualele poze.",
  "Why we use it": "Pentru ce folosim",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Pentru a răspunde solicitării, a-ți da o ofertă și a face reparația. Nu îți vindem datele și nu trimitem reclame fără să întrebăm mai întâi.",
  "How long we keep it": "Cât timp păstrăm",
@@ -359,5 +358,14 @@
  "Rear right quarter": "Aripa spate dreapta",
  "Factory paint.": "Vopsea din fabrică.",
  "Repainted.": "Revopsit.",
- "Filler likely.": "Probabil chit."
+ "Filler likely.": "Probabil chit.",
+ "Photos of the damage (optional)": "Poze cu avaria (opțional)",
+ "Add photos": "Adaugă poze",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Până la 5 poze. Nu sunt încărcate pe acest site: pleacă de pe telefon doar prin WhatsApp.",
+ "You can add up to 5 photos.": "Poți adăuga până la 5 poze.",
+ "Remove photo": "Șterge poza",
+ "Photo of the damage": "Poză cu avaria",
+ "Shared. Make sure you pressed send in WhatsApp.": "Partajat. Verifică să fi apăsat trimite în WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "E-mailul nu poate atașa poze de pe această pagină. Adaugă-le în aplicația de e-mail.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Doar ce ne trimiți: numele, telefonul, numărul de înmatriculare, datele mașinii, o descriere a avariei și pozele atașate. Pozele rămân pe telefonul tău până le trimiți pe WhatsApp. Acest site nu le încarcă și nu le păstrează."
 }

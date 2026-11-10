@@ -299,6 +299,13 @@ label{font-weight:700;display:block;margin-bottom:6px}
 input,textarea{width:100%;font:inherit;padding:13px 14px;border:2px solid transparent;border-radius:12px;background:#fff;color:var(--ink);min-height:52px}
 input:focus,textarea:focus{border-color:var(--gold);outline:none}
 .two{display:grid;gap:16px}@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;min-height:0;padding:0;border:0}
+.photobtn{display:inline-block;margin:0;padding:13px 20px;border:2px dashed rgba(255,255,255,.6);border-radius:12px;cursor:pointer;font-weight:700}
+.vh:focus-visible+.photobtn,.photobtn:hover{border-color:var(--gold)}
+.thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.thumbs div{position:relative;width:72px;height:72px}
+.thumbs img{width:100%;height:100%;object-fit:cover;border-radius:10px;display:block}
+.thumbs button{position:absolute;top:-8px;right:-8px;width:28px;height:28px;border-radius:50%;border:0;background:#fff;color:#000;font:700 16px/1 sans-serif;cursor:pointer}
 .ok{display:none;background:#0f3d2a;padding:14px 18px;border-radius:12px}
 .card{background:rgba(8,9,11,.35);border-radius:18px;padding:26px}
 .card h3{margin-bottom:10px}
@@ -545,12 +552,18 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
     <p class="hint">As shown on your Jersey number plate.</p></div>
    <div><label for="r">Car make and model</label><input id="r" placeholder="e.g. Volkswagen Golf"></div>
    <div class="two"><div><label for="n">Your name</label><input id="n" autocomplete="name" required></div><div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required></div></div>
-   
    <div><label for="d">What happened?</label><textarea id="d" rows="3" placeholder="e.g. scraped the rear door in a car park"></textarea></div>
+      <div class="ph"><label id="phl" for="ph">Photos of the damage (optional)</label>
+    <input id="ph" class="vh" type="file" accept="image/*" multiple>
+    <label class="photobtn" for="ph">Add photos</label>
+    <div class="thumbs" id="thumbs"></div>
+    <p class="hint" id="phn">Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.</p></div>
       <p class="legal">We use your details only to reply to your enquiry. See our <a href="#privacy" style="color:#fff">privacy notice</a>.</p>
    <button class="btn wa" type="submit" style="color:var(--ink)">Send on WhatsApp</button>
    <p class="alt">No WhatsApp? <a href="#" id="mail">Send it by email instead</a>.</p>
    <div class="ok" id="ok" role="status">WhatsApp is opening with your message. Add photos of the damage in the chat, then press send.</div>
+   <div class="ok" id="ok2" role="status">Shared. Make sure you pressed send in WhatsApp.</div>
+   <div class="ok" id="ok3" role="status">Email cannot attach photos from this page. Please add them in your email app.</div>
   </form>
  </div>
  <div>
@@ -562,7 +575,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="privacy" class="priv"><div class="w">
  <h2>Privacy notice</h2>
  <h3>Who we are</h3><p>SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].</p>
- <h3>What we collect</h3><p>Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.</p>
+ <h3>What we collect</h3><p>Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.</p>
  <h3>Why we use it</h3><p>To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.</p>
  <h3>How long we keep it</h3><p>[For example, up to two years after your last job.] Then it is deleted.</p>
  <h3>Who else sees it</h3><p>No one outside SVR, except the services you choose to contact us through. Messages sent by WhatsApp are also handled by WhatsApp (Meta).</p>
@@ -620,12 +633,36 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
    'Registration: '+(v('g')||'-')+'\nCar: '+(v('r')||'-')+'\nName: '+v('n')+'\nPhone: '+v('p')+'\nWhat happened: '+(v('d')||'-');
  }
  var form=document.getElementById('f');
+ var photos=[],MAX=5,thumbs=document.getElementById('thumbs'),phn=document.getElementById('phn'),input=document.getElementById('ph');
+ function tt(s){return window.SVR_T?window.SVR_T(s):s}
+ var hint0=phn.textContent;
+ function draw(){
+  thumbs.innerHTML='';
+  photos.forEach(function(file,i){
+   var d=document.createElement('div'),im=document.createElement('img'),x=document.createElement('button');
+   im.alt=tt('Photo of the damage');im.src=URL.createObjectURL(file);
+   x.type='button';x.textContent='×';x.setAttribute('aria-label',tt('Remove photo'));
+   x.addEventListener('click',function(){URL.revokeObjectURL(im.src);photos.splice(i,1);draw()});
+   d.appendChild(im);d.appendChild(x);thumbs.appendChild(d)})}
+ input.addEventListener('change',function(){
+  var over=false;
+  Array.prototype.forEach.call(input.files,function(f){if(photos.length<MAX)photos.push(f);else over=true});
+  input.value='';draw();
+  phn.dataset.over=over?'1':'';phn.textContent=over?tt('You can add up to 5 photos.'):tt(hint0)});
+ document.addEventListener('svrlang',function(){draw();phn.textContent=tt(phn.dataset.over?'You can add up to 5 photos.':hint0)});
+ function hide(){['ok','ok2','ok3'].forEach(function(i){document.getElementById(i).style.display='none'})}
+ function show(i){hide();document.getElementById(i).style.display='block'}
+ function viaLink(){
+  window.open('https://wa.me/'+SVR_WHATSAPP+'?text='+encodeURIComponent(msg()),'_blank','noopener');show('ok')}
  form.addEventListener('submit',function(e){e.preventDefault();
-  window.open('https://wa.me/'+SVR_WHATSAPP+'?text='+encodeURIComponent(msg()),'_blank','noopener');
-  document.getElementById('ok').style.display='block'});
+  /* With photos on a phone: open the share sheet (WhatsApp) with the message and photos attached. Otherwise: wa.me link. */
+  if(photos.length&&navigator.canShare&&navigator.canShare({files:photos})){
+   navigator.share({text:msg(),files:photos}).then(function(){show('ok2')}).catch(function(err){if(!err||err.name!=='AbortError')viaLink()});
+   return}
+  viaLink()});
  document.getElementById('mail').addEventListener('click',function(e){e.preventDefault();
   if(!form.reportValidity())return;
-  location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent('Estimate request')+'&body='+encodeURIComponent(msg())});
+  if(photos.length)show('ok3');location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent('Estimate request')+'&body='+encodeURIComponent(msg())});
 })();
 </script>
 <script>document.querySelectorAll('[data-same]').forEach(function(i){i.src=document.querySelector('[data-key="'+i.dataset.same+'"]').src})</script>
@@ -798,7 +835,6 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Who we are": "Quiénes somos",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [dirección], Jersey [JE_ ___]. Contacto: [email@address].",
  "What we collect": "Qué datos recogemos",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Solo lo que nos envías: tu nombre, teléfono, matrícula, datos del coche, una descripción del daño y las fotos.",
  "Why we use it": "Para qué los usamos",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Para responder a tu consulta, darte un presupuesto y hacer la reparación. No vendemos tus datos ni enviamos publicidad sin preguntarte antes.",
  "How long we keep it": "Cuánto tiempo los guardamos",
@@ -991,7 +1027,16 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Rear right quarter": "Aleta trasera derecha",
  "Factory paint.": "Pintura de fábrica.",
  "Repainted.": "Repintado.",
- "Filler likely.": "Posible masilla."
+ "Filler likely.": "Posible masilla.",
+ "Photos of the damage (optional)": "Fotos del daño (opcional)",
+ "Add photos": "Añadir fotos",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Hasta 5 fotos. No se suben a esta web: solo salen de tu teléfono por WhatsApp.",
+ "You can add up to 5 photos.": "Puedes añadir hasta 5 fotos.",
+ "Remove photo": "Quitar foto",
+ "Photo of the damage": "Foto del daño",
+ "Shared. Make sure you pressed send in WhatsApp.": "Compartido. Comprueba que pulsaste enviar en WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "El correo no puede adjuntar fotos desde esta página. Añádelas en tu aplicación de correo.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Solo lo que nos envías: tu nombre, teléfono, matrícula, datos del coche, una descripción del daño y las fotos que adjuntes. Las fotos se quedan en tu teléfono hasta que las envías por WhatsApp. Esta web no las sube ni las guarda."
 },pt:{
  "MOCKUP: free-licence example photos. [ ] = real workshop details to come.": "MAQUETE: fotos de exemplo com licença livre. [ ] = dados reais da oficina por chegar.",
  "Services": "Serviços",
@@ -1160,7 +1205,6 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Who we are": "Quem somos",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [morada], Jersey [JE_ ___]. Contacto: [email@address].",
  "What we collect": "O que recolhemos",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Apenas o que nos envia: o seu nome, telefone, matrícula, dados do carro, uma descrição do dano e eventuais fotos.",
  "Why we use it": "Para que usamos",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Para responder ao seu pedido, dar-lhe um orçamento e fazer a reparação. Não vendemos os seus dados nem enviamos publicidade sem perguntar primeiro.",
  "How long we keep it": "Quanto tempo guardamos",
@@ -1359,7 +1403,16 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "A clear written estimate, no surprises": "Orçamento claro por escrito, sem surpresas",
  "We deal with your insurer, step by step": "Tratamos da seguradora consigo, passo a passo",
  "Updates on WhatsApp, in your language": "Novidades por WhatsApp, na sua língua",
- "Ask in Portuguese": "Peça em português"
+ "Ask in Portuguese": "Peça em português",
+ "Photos of the damage (optional)": "Fotos do dano (opcional)",
+ "Add photos": "Adicionar fotos",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Até 5 fotos. Não são enviadas para este site: só saem do seu telemóvel pelo WhatsApp.",
+ "You can add up to 5 photos.": "Pode adicionar até 5 fotos.",
+ "Remove photo": "Remover foto",
+ "Photo of the damage": "Foto do dano",
+ "Shared. Make sure you pressed send in WhatsApp.": "Partilhado. Confirme que carregou em enviar no WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "O e-mail não pode anexar fotos a partir desta página. Junte-as na sua aplicação de e-mail.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Apenas o que nos envia: o seu nome, telefone, matrícula, dados do carro, uma descrição do dano e as fotos que juntar. As fotos ficam no seu telemóvel até as enviar por WhatsApp. Este site não as carrega nem as guarda."
 },pl:{
  "MOCKUP: free-licence example photos. [ ] = real workshop details to come.": "MAKIETA: zdjęcia przykładowe na wolnej licencji. [ ] = dane warsztatu do uzupełnienia.",
  "Services": "Usługi",
@@ -1528,7 +1581,6 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Who we are": "Kim jesteśmy",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [adres], Jersey [JE_ ___]. Kontakt: [email@address].",
  "What we collect": "Co zbieramy",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Tylko to, co nam przesyłasz: imię, numer telefonu, numer rejestracyjny, dane auta, opis uszkodzenia i ewentualne zdjęcia.",
  "Why we use it": "Do czego używamy",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Aby odpowiedzieć na zapytanie, przygotować wycenę i wykonać naprawę. Nie sprzedajemy Twoich danych ani nie wysyłamy reklam bez wcześniejszej zgody.",
  "How long we keep it": "Jak długo przechowujemy",
@@ -1721,7 +1773,16 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Rear right quarter": "Błotnik tylny prawy",
  "Factory paint.": "Lakier fabryczny.",
  "Repainted.": "Przemalowane.",
- "Filler likely.": "Prawdopodobna szpachla."
+ "Filler likely.": "Prawdopodobna szpachla.",
+ "Photos of the damage (optional)": "Zdjęcia uszkodzenia (opcjonalnie)",
+ "Add photos": "Dodaj zdjęcia",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Do 5 zdjęć. Nie są wysyłane na tę stronę: opuszczają telefon tylko przez WhatsApp.",
+ "You can add up to 5 photos.": "Możesz dodać maksymalnie 5 zdjęć.",
+ "Remove photo": "Usuń zdjęcie",
+ "Photo of the damage": "Zdjęcie uszkodzenia",
+ "Shared. Make sure you pressed send in WhatsApp.": "Udostępniono. Upewnij się, że nacisnąłeś wyślij w WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "E-mail nie może dołączyć zdjęć z tej strony. Dodaj je w aplikacji pocztowej.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Tylko to, co nam przesyłasz: imię, numer telefonu, numer rejestracyjny, dane auta, opis uszkodzenia i dołączone zdjęcia. Zdjęcia zostają na Twoim telefonie, dopóki nie wyślesz ich przez WhatsApp. Ta strona ich nie wysyła ani nie zapisuje."
 },ro:{
  "MOCKUP: free-licence example photos. [ ] = real workshop details to come.": "MACHETĂ: fotografii exemplu cu licență liberă. [ ] = datele reale ale atelierului urmează.",
  "Services": "Servicii",
@@ -1890,7 +1951,6 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Who we are": "Cine suntem",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [adresa], Jersey [JE_ ___]. Contact: [email@address].",
  "What we collect": "Ce colectăm",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Doar ce ne trimiți: numele, numărul de telefon, numărul de înmatriculare, datele mașinii, o descriere a avariei și eventualele poze.",
  "Why we use it": "Pentru ce folosim",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Pentru a răspunde solicitării, a-ți da o ofertă și a face reparația. Nu îți vindem datele și nu trimitem reclame fără să întrebăm mai întâi.",
  "How long we keep it": "Cât timp păstrăm",
@@ -2083,7 +2143,16 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  "Rear right quarter": "Aripa spate dreapta",
  "Factory paint.": "Vopsea din fabrică.",
  "Repainted.": "Revopsit.",
- "Filler likely.": "Probabil chit."
+ "Filler likely.": "Probabil chit.",
+ "Photos of the damage (optional)": "Poze cu avaria (opțional)",
+ "Add photos": "Adaugă poze",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Până la 5 poze. Nu sunt încărcate pe acest site: pleacă de pe telefon doar prin WhatsApp.",
+ "You can add up to 5 photos.": "Poți adăuga până la 5 poze.",
+ "Remove photo": "Șterge poza",
+ "Photo of the damage": "Poză cu avaria",
+ "Shared. Make sure you pressed send in WhatsApp.": "Partajat. Verifică să fi apăsat trimite în WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "E-mailul nu poate atașa poze de pe această pagină. Adaugă-le în aplicația de e-mail.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Doar ce ne trimiți: numele, telefonul, numărul de înmatriculare, datele mașinii, o descriere a avariei și pozele atașate. Pozele rămân pe telefonul tău până le trimiți pe WhatsApp. Acest site nu le încarcă și nu le păstrează."
 }};
  var KEY='svr-lang',lang='en';
  try{lang=new URLSearchParams(location.search).get('lang')||localStorage.getItem(KEY)||'en'}catch(e){}

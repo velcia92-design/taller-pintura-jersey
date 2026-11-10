@@ -166,7 +166,6 @@
  "Who we are": "Quem somos",
  "SVR – Sienna Vehicle Refinishing, [address], Jersey [JE_ ___]. Contact: [email@address].": "SVR – Sienna Vehicle Refinishing, [morada], Jersey [JE_ ___]. Contacto: [email@address].",
  "What we collect": "O que recolhemos",
- "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos.": "Apenas o que nos envia: o seu nome, telefone, matrícula, dados do carro, uma descrição do dano e eventuais fotos.",
  "Why we use it": "Para que usamos",
  "To reply to your enquiry, give you an estimate and carry out the repair. We do not sell your details or send marketing without asking first.": "Para responder ao seu pedido, dar-lhe um orçamento e fazer a reparação. Não vendemos os seus dados nem enviamos publicidade sem perguntar primeiro.",
  "How long we keep it": "Quanto tempo guardamos",
@@ -365,5 +364,14 @@
  "A clear written estimate, no surprises": "Orçamento claro por escrito, sem surpresas",
  "We deal with your insurer, step by step": "Tratamos da seguradora consigo, passo a passo",
  "Updates on WhatsApp, in your language": "Novidades por WhatsApp, na sua língua",
- "Ask in Portuguese": "Peça em português"
+ "Ask in Portuguese": "Peça em português",
+ "Photos of the damage (optional)": "Fotos do dano (opcional)",
+ "Add photos": "Adicionar fotos",
+ "Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.": "Até 5 fotos. Não são enviadas para este site: só saem do seu telemóvel pelo WhatsApp.",
+ "You can add up to 5 photos.": "Pode adicionar até 5 fotos.",
+ "Remove photo": "Remover foto",
+ "Photo of the damage": "Foto do dano",
+ "Shared. Make sure you pressed send in WhatsApp.": "Partilhado. Confirme que carregou em enviar no WhatsApp.",
+ "Email cannot attach photos from this page. Please add them in your email app.": "O e-mail não pode anexar fotos a partir desta página. Junte-as na sua aplicação de e-mail.",
+ "Only what you send us: your name, phone number, registration, car details, a description of the damage and any photos. Photos stay on your device until you send them by WhatsApp. This website does not upload or store them.": "Apenas o que nos envia: o seu nome, telefone, matrícula, dados do carro, uma descrição do dano e as fotos que juntar. As fotos ficam no seu telemóvel até as enviar por WhatsApp. Este site não as carrega nem as guarda."
 }
