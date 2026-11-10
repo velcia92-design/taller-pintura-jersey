@@ -61,13 +61,17 @@ def check_assets(html: str, page: str) -> list[str]:
 
 def build_pages() -> list[str]:
     missing = []
+    built = []
     for source, target in PAGES.items():
         src = ROOT / source
         dst = ROOT / target
         html = src.read_text(encoding="utf-8")
         dst.write_text(html, encoding="utf-8")
-        missing += check_assets(html, target)
+        built.append((target, html))
         print(f"page: {source} -> {target} ({dst.stat().st_size / 1024:.0f} KB)")
+    # Revisar los enlaces solo cuando todas las páginas ya existen.
+    for target, html in built:
+        missing += check_assets(html, target)
     return missing
 
 
