@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velcia92-design.github.io/taller-pintura-jersey/sitemap.xml

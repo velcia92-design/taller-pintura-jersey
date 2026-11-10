@@ -37,6 +37,7 @@
 ]}
 </script>
 <link rel="preload" href="fonts/Archivo-500_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="images/web/hero.jpg" imagesrcset="images/web/hero-800.jpg 800w, images/web/hero-1200.jpg 1200w, images/web/hero.jpg 1400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="fonts/fonts.css?v=20261110">
 <link rel="stylesheet" href="assets/tokens.css?v=20261110">
 <link rel="stylesheet" href="assets/lang.css?v=20261110">
@@ -386,7 +387,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 
 <header id="hd">
  <div class="w">
-  <a class="logo" href="#top"><img src="images/web/logo.jpg" alt="SVR logo"><span>Sienna Vehicle Refinishing</span></a>
+  <a class="logo" href="#top"><img src="images/web/logo.jpg" alt="SVR logo" width="120" height="119"><span>Sienna Vehicle Refinishing</span></a>
   <nav id="nav" aria-label="Main"><a href="services.html">Services</a><a href="#process">Process</a><a href="car-check.html">Car Check</a><a href="#standards">Standards</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a class="nav-act" href="tel:+44000000000">Call</a><a class="nav-act wa" href="https://wa.me/44000000000">WhatsApp</a></nav>
   <div class="hdr-r"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><a class="tel" href="tel:+44000000000">[01534 000000]</a><button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button></div>
  </div>
@@ -394,7 +395,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 
 <main id="top" tabindex="-1">
 <div class="hero">
- <div class="bg" id="heroBg"><img src="images/web/hero.jpg" width="1400" height="1050" alt="SVR painter spraying a car panel in the spray booth"></div>
+ <div class="bg" id="heroBg"><img src="images/web/hero.jpg" srcset="images/web/hero-800.jpg 800w, images/web/hero-1200.jpg 1200w, images/web/hero.jpg 1400w" sizes="100vw" width="1400" height="1050" alt="SVR painter spraying a car panel in the spray booth" fetchpriority="high" decoding="async"></div>
  <div class="w">
   <p class="eyebrow">Car body repair &amp; paint · Jersey</p>
   <h1>
@@ -434,9 +435,9 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="services"><div class="w">
  <div class="intro up"><h2>Whatever happened to your car</h2><p>Send us a photo and we will tell you plainly what it needs. Sometimes that is a small repair, not a respray.</p></div>
  <div class="sg">
-  <a class="c up" href="#contact"><img src="images/web/dent.jpg" alt="Technician removing a dent from a car door panel" loading="lazy"><div><h3>Dents without the respray</h3><p>Paintless dent removal where the paint is unbroken. Panel work where it is not.</p><small>From [£000]</small></div></a>
-  <a class="c up" href="#contact"><img src="images/web/bumper.jpg" alt="Technician in protective suit spraying a car bumper" loading="lazy"><div><h3>Accident and bumper repair</h3><p>Prepared, primed and painted in a controlled booth, then we deal with your insurer if you wish.</p><small>Free estimate</small></div></a>
-  <a class="c up" href="#contact"><img src="images/web/polish.jpg" alt="Technician polishing a car panel with a machine" loading="lazy"><div><h3>Polish and protect</h3><p>Swirl marks, faded lacquer and light scratches brought back to a mirror shine.</p><small>From [£000]</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/dent.jpg" alt="Technician removing a dent from a car door panel" loading="lazy" width="480" height="720"><div><h3>Dents without the respray</h3><p>Paintless dent removal where the paint is unbroken. Panel work where it is not.</p><small>From [£000]</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/bumper.jpg" alt="Technician in protective suit spraying a car bumper" loading="lazy" width="480" height="720"><div><h3>Accident and bumper repair</h3><p>Prepared, primed and painted in a controlled booth, then we deal with your insurer if you wish.</p><small>Free estimate</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/polish.jpg" alt="Technician polishing a car panel with a machine" loading="lazy" width="405" height="720"><div><h3>Polish and protect</h3><p>Swirl marks, faded lacquer and light scratches brought back to a mirror shine.</p><small>From [£000]</small></div></a>
  </div>
  <p style="margin-top:26px"><a class="btn" href="services.html">See all services</a></p>
  <div class="more"><b>Also:</b> <a href="services.html#rust">Rust and underseal</a> <a href="services.html#protection">Paint protection</a> <a href="services.html#fleet">Fleet and trade</a></div>
@@ -473,12 +474,12 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <div class="intro"><h2>How your car comes back perfect</h2><p>Scroll to follow a repair from the first look to the keys in your hand.</p></div>
  <div class="pg">
   <div class="pin" id="pin" aria-hidden="true">
-   <img class="on" src="images/web/workshop.jpg" alt="">
-   <img src="images/web/spray.jpg" alt="">
-   <img src="images/web/closeup.jpg" alt="">
-   <img src="images/web/booth.jpg" alt="">
-   <img src="images/web/buff-red.jpg" alt="" style="object-position:50% 30%">
-   <img src="images/web/blue-garage.jpg" alt="" style="object-position:50% 70%">
+   <img class="on" src="images/web/workshop.jpg" alt="" width="1000" height="504">
+   <img src="images/web/spray.jpg" alt="" width="1000" height="750">
+   <img src="images/web/closeup.jpg" alt="" width="1000" height="667">
+   <img src="images/web/booth.jpg" alt="" width="1000" height="515">
+   <img src="images/web/buff-red.jpg" alt="" style="object-position:50% 30%" width="562" height="1000">
+   <img src="images/web/blue-garage.jpg" alt="" style="object-position:50% 70%" width="800" height="1000">
    <div class="cnt" id="cnt">1 / 6</div>
   </div>
   <div>
@@ -496,9 +497,9 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="work"><div class="w bag">
  <div>
   <div class="ba" id="ba">
-   <img class="bf" src="images/web/blue-garage.jpg" alt="Car before repair (demo effect)">
+   <img class="bf" src="images/web/blue-garage.jpg" alt="Car before repair (demo effect)" width="800" height="1000">
    <svg class="scr" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M60 180l70 18M70 195l55 12M80 165l40 8M240 150l60 22M250 170l50 10M270 140l35 12M170 210l44 6"/></g></svg>
-   <img class="af" id="af" src="images/web/blue-garage.jpg" alt="Car after repair">
+   <img class="af" id="af" src="images/web/blue-garage.jpg" alt="Car after repair" width="800" height="1000">
    <span class="tag" style="left:14px">Before</span><span class="tag" style="right:14px">After</span>
    <div class="hd" id="hd2"></div>
    <input type="range" min="2" max="98" value="50" id="rg" aria-label="Compare before and after">
@@ -589,8 +590,8 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 
 <section id="instagram"><div class="w ig">
  <div class="igcard up">
-  <header><img src="images/web/logo.jpg" alt=""><span>svrje2023<small>Jersey, Channel Islands</small></span></header>
-  <img src="images/web/svr-post.jpg" alt="SVR painter spraying a red panel in the booth" loading="lazy">
+  <header><img src="images/web/logo.jpg" alt="" width="120" height="119"><span>svrje2023<small>Jersey, Channel Islands</small></span></header>
+  <img src="images/web/svr-post.jpg" alt="SVR painter spraying a red panel in the booth" loading="lazy" width="498" height="420">
   <p>Book your appointment now @svrje2023</p>
  </div>
  <div class="up">
