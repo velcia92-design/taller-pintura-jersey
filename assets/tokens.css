@@ -1,4 +1,5 @@
 /* SVR design tokens. Change the palette here, not in each page. */
+html{scroll-padding-top:86px} /* keeps anchor targets clear of the fixed header */
 :root{
   --ink:#08090b;
   --ink2:#15181e;

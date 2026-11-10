@@ -25,9 +25,9 @@
 ]}
 </script>
 <link rel="preload" href="fonts/Archivo-500_900-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts/fonts.css?v=20261110">
-<link rel="stylesheet" href="assets/tokens.css?v=20261110">
-<link rel="stylesheet" href="assets/lang.css?v=20261110">
+<link rel="stylesheet" href="fonts/fonts.css?v=20261111">
+<link rel="stylesheet" href="assets/tokens.css?v=20261111">
+<link rel="stylesheet" href="assets/lang.css?v=20261111">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 *{box-sizing:border-box}
@@ -140,8 +140,8 @@ section{padding:88px 0}
 .lim{background:#fff;border-radius:20px;padding:28px;border-left:6px solid var(--warn)}
 .lim ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
 
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font:700 1.15rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font:700 1.15rem var(--head);list-style:none;display:flex;align-items:center;min-height:44px;justify-content:space-between;gap:16px}
 summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--blue)}
 details[open] summary::after{content:"–"}
 details p{margin:10px 0 0;color:var(--muted)}
@@ -184,7 +184,7 @@ footer a{color:var(--sky)}
   <p class="why"><b>Why in person?</b> Jersey has no public vehicle history database. Online checks only cover cars with a UK past. So we check what matters most: the car itself.</p>
  </div>
 
- <div class="map up" aria-label="Interactive sample panel map">
+ <div class="map up" role="group" aria-label="Interactive sample panel map">
   <svg viewBox="0 0 220 440" role="group" aria-label="Car seen from above, front at the top">
    <rect x="16" y="8" width="188" height="424" rx="64" fill="#1d222b"/>
    <rect class="pn" data-p="Front bumper" data-v="—" data-s="ok" x="32" y="14" width="156" height="28" rx="18" tabindex="0"/>
@@ -280,8 +280,8 @@ footer a{color:var(--sky)}
 <footer><div class="w">SVR Car Check is a service of SVR – Sienna Vehicle Refinishing, Jersey. <a href="services.html">Our services</a> · <a href="index.html">Back to SVR</a> · <a href="index.html#privacy">Privacy notice</a></div></footer>
 <div class="bar"><a href="#bk">Book a Car Check</a><a href="https://wa.me/44000000000">WhatsApp</a></div>
 
-<script src="assets/translations.js?v=20261110"></script>
-<script src="assets/lang.js?v=20261110"></script>
+<script src="assets/translations.js?v=20261111"></script>
+<script src="assets/lang.js?v=20261111"></script>
 <script>
 (function(){
  /* reveal */
