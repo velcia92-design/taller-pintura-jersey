@@ -80,9 +80,10 @@ footer a{color:var(--sky)}
 </head>
 <body>
 <div class="mock">MOCKUP: example photos and text. Prices and times in [ ] to be confirmed with SVR.</div>
-<header><div class="w">
+<header id="hd"><div class="w">
  <a class="logo" href="index.html"><img src="images/logo.jpg" alt="SVR logo"><span>Sienna Vehicle Refinishing</span></a>
- <div class="hr"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><a class="back" href="index.html">← SVR home</a></div>
+ <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="services.html" aria-current="page">Services</a><a href="car-check.html">Car Check</a><a href="index.html#contact">Contact</a><a class="nav-act" href="tel:+44000000000">Call</a><a class="nav-act wa" href="https://wa.me/44000000000">WhatsApp</a></nav>
+ <div class="hdr-r"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button></div>
 </div></header>
 
 <main>
