@@ -1,1 +1,7 @@
 .DS_Store
+
+# Archivos generados por tools/build.py (no se guardan en Git)
+/index.html
+/services.html
+/car-check.html
+/assets/translations.js

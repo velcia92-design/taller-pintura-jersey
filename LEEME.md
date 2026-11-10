@@ -63,12 +63,9 @@ para que la página no salte al cargar.
 
 La web se sirve desde GitHub Pages: <https://velcia92-design.github.io/taller-pintura-jersey/>
 
-```sh
-python3 tools/build.py
-git add -A
-git commit -m "Describe el cambio"
-git push origin main
-```
+Al unir un cambio a `main`, GitHub genera las páginas y publica la web solo (flujo `.github/workflows/publicar.yml`).
+Los archivos generados no se guardan en Git: `index.html`, `services.html`, `car-check.html` y `assets/translations.js`.
+Para verlos en tu ordenador, ejecuta `python3 tools/build.py`.
 
 GitHub tarda entre uno y tres minutos en reconstruir el sitio. Si el navegador muestra la versión
 antigua, recarga con `Ctrl/Cmd + Shift + R`.
@@ -76,3 +73,12 @@ antigua, recarga con `Ctrl/Cmd + Shift + R`.
 Estado actual: publicado como **maqueta**. Lleva la franja «Mockup», fotos de ejemplo y datos
 entre `[ ]`. No es la versión definitiva: antes de darla por buena hay que completar
 `PENDIENTE_SVR.md` y quitar la franja.
+
+## Cómo trabajamos en equipo
+
+- Cada persona trabaja en su rama: `cambios-gabriel`, `cambios-vicente`.
+- Antes de empezar cada sesión: `git switch main && git pull`, y luego traer los cambios a la rama propia con `git switch <mi-rama> && git merge main`.
+- Cambios pequeños y frecuentes. Si dos personas van a tocar el mismo bloque, avisarse antes.
+- Se edita solo `*-fuente.html`, los `traducciones-*.json` y las imágenes. Nunca los archivos generados.
+- Se sube la propia rama y se abre un Pull Request hacia `main`. Al unirlo, la web se publica sola en 1–3 minutos.
+- Nadie hace `git push` directo a `main`.
