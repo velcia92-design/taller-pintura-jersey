@@ -56,4 +56,4 @@
 - [ ] Rellenar los `[ ]` visibles o quitarlos
 - [ ] Revisar el aviso de privacidad con alguien que conozca la ley de Jersey (Data Protection (Jersey) Law 2018)
 - [ ] Quitar las reseñas, cifras y fotos de ejemplo
-- [ ] Quitar la franja amarilla «MOCKUP»
+- [ ] Quitar la franja «Mockup»

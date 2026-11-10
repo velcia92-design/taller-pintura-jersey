@@ -33,4 +33,21 @@ El script copia las fuentes, genera `assets/translations.js` desde los `traducci
 - No edites `index.html`, `services.html` ni `car-check.html` a mano: se sobrescriben.
 - El formulario no tiene servidor: abre WhatsApp (o el correo) con el mensaje preparado.
 - Las fotos y los datos entre `[ ]` son de ejemplo. Antes de publicar hay que sustituirlos; la lista está en `PENDIENTE_SVR.md`.
-- La web está en GitHub Pages: <https://velcia92-design.github.io/taller-pintura-jersey/>. No se publica nada nuevo hasta que el dueño lo pida.
+
+## Publicar
+
+La web se sirve desde GitHub Pages: <https://velcia92-design.github.io/taller-pintura-jersey/>
+
+```sh
+python3 tools/build.py
+git add -A
+git commit -m "Describe el cambio"
+git push origin main
+```
+
+GitHub tarda entre uno y tres minutos en reconstruir el sitio. Si el navegador muestra la versión
+antigua, recarga con `Ctrl/Cmd + Shift + R`.
+
+Estado actual: publicado como **maqueta**. Lleva la franja «Mockup», fotos de ejemplo y datos
+entre `[ ]`. No es la versión definitiva: antes de darla por buena hay que completar
+`PENDIENTE_SVR.md` y quitar la franja.
