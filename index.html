@@ -707,7 +707,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 
  /* book an inspection: prefill the form */
  var bi=document.getElementById('bookInspect');
- if(bi)bi.addEventListener('click',function(){var d=document.getElementById('d');if(d&&!d.value)d.value='Pre-purchase bodywork inspection for a car I am thinking of buying.'});
+ if(bi)bi.addEventListener('click',function(){var d=document.getElementById('d');if(d&&!d.value)d.value=(window.SVR_T?window.SVR_T('Pre-purchase bodywork inspection for a car I am thinking of buying.'):'Pre-purchase bodywork inspection for a car I am thinking of buying.')});
 
  /* floating spray-gun button */
  var fab=document.getElementById('fab'),ct=document.getElementById('contact');
@@ -721,12 +721,12 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 
  /* Estimate form: opens WhatsApp (or email) with the message ready. No server or account needed.
     Replace these two with SVR's real WhatsApp number (international format, no + or spaces) and email. */
- /* Replace with the workshop's real number (international format, no + or spaces) and email. */
  var SVR_WHATSAPP='44000000000', SVR_EMAIL='hello@example.com';
  function msg(){
   function v(id){return (document.getElementById(id).value||'').trim()}
-  return 'Hello SVR, I would like a free estimate.\n'+
-   'Registration: '+(v('g')||'-')+'\nCar: '+(v('r')||'-')+'\nName: '+v('n')+'\nPhone: '+v('p')+'\nWhat happened: '+(v('d')||'-')+'\nPreferred drop-off: '+(v('pd')||'-');
+  function L(s){return window.SVR_T?window.SVR_T(s):s}
+  return L('Hello SVR, I would like a free estimate.')+'\n'+
+   L('Registration')+': '+(v('g')||'-')+'\n'+L('Car')+': '+(v('r')||'-')+'\n'+L('Name')+': '+v('n')+'\n'+L('Phone')+': '+v('p')+'\n'+L('What happened')+': '+(v('d')||'-')+'\n'+L('Preferred drop-off')+': '+(v('pd')||'-');
  }
  var form=document.getElementById('f');
  var photos=[],MAX=5,thumbs=document.getElementById('thumbs'),phn=document.getElementById('phn'),input=document.getElementById('ph');
@@ -758,7 +758,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
   viaLink()});
  document.getElementById('mail').addEventListener('click',function(e){e.preventDefault();
   if(!form.reportValidity())return;
-  if(photos.length)show('ok3');location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent('Estimate request')+'&body='+encodeURIComponent(msg())});
+  if(photos.length)show('ok3');location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent(window.SVR_T?window.SVR_T('Estimate request'):'Estimate request')+'&body='+encodeURIComponent(msg())});
 })();
 </script>
 </body>
