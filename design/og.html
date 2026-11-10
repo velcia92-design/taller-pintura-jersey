@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>SVR · Open Graph card</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden;background:#08090b}
+  .card{position:relative;width:1200px;height:630px;overflow:hidden;background:#08090b;color:#fff;font-family:'Source Sans 3',system-ui,sans-serif}
+  .photo{position:absolute;inset:0 0 0 45%;background:url(../images/web/closeup.jpg) 55% 50%/cover no-repeat;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+  .shade{position:absolute;inset:0;background:linear-gradient(90deg,#08090b 0%,rgba(8,9,11,.92) 46%,rgba(8,9,11,.25) 100%)}
+  .content{position:relative;z-index:2;padding:48px 0 0 68px;width:760px}
+  .logo{width:72px;height:72px;border-radius:10px;display:block}
+  .eyebrow{margin:26px 0 0;font:700 17px 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9fd0ff;display:flex;align-items:center;gap:14px}
+  .eyebrow::before{content:"";width:42px;height:3px;background:#0a6fe0}
+  h1{margin:14px 0 0;font:850 78px/1.02 'Archivo',sans-serif;font-stretch:112%;letter-spacing:-.02em}
+  p{margin:18px 0 0;font-size:21px;line-height:1.32;color:#dbe8e8;max-width:560px}
+  .foot{position:absolute;left:68px;bottom:26px;z-index:2;display:flex;align-items:center;gap:12px;font-size:19px;color:#9db3b8}
+  .foot b{color:#fff;font-weight:700}
+  .bar{position:absolute;left:0;right:0;bottom:0;height:10px;background:#0a6fe0;z-index:3}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="photo"></div>
+  <div class="shade"></div>
+  <div class="content">
+    <img class="logo" src="../images/web/logo.jpg" alt="SVR">
+    <p class="eyebrow">Car body repair &amp; paint · Jersey</p>
+    <h1>Flawless<br>finish.<br>Every panel.</h1>
+    <p>Colour-matched, finished to disappear, and guaranteed in writing.</p>
+  </div>
+  <div class="foot"><b>SVR</b> · Sienna Vehicle Refinishing · Jersey</div>
+  <div class="bar"></div>
+</div>
+</body>
+</html>

@@ -3,15 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVR Vehicle Refinishing</title>
-<!-- For the live site, use this title instead: Car Body Repair &amp; Paint in Jersey | SVR Sienna Vehicle Refinishing -->
-<meta name="description" content="Car body repair, paint and dent removal in Jersey, Channel Islands. Over 20 years' experience. Free written estimates from SVR – Sienna Vehicle Refinishing.">
+<title>Car Body Repair &amp; Paint in Jersey | SVR Sienna Vehicle Refinishing</title>
+<meta name="description" content="Car body repair, paint and dent removal in Jersey, Channel Islands. Over 20 years’ experience. Free written estimates from SVR – Sienna Vehicle Refinishing.">
 <meta name="theme-color" content="#08090b">
+<link rel="icon" href="images/web/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/web/apple-touch-icon.png">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVR – Sienna Vehicle Refinishing">
 <meta property="og:title" content="Car Body Repair &amp; Paint in Jersey | SVR">
-<meta property="og:description" content="Paint, dent and accident repairs across Jersey. Over 20 years' experience. Free written estimates.">
+<meta property="og:description" content="Paint, dent and accident repairs across Jersey. Over 20 years’ experience. Free written estimates.">
 <meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://velcia92-design.github.io/taller-pintura-jersey/images/web/og.jpg">
+<meta property="og:image:alt" content="Painter spraying a car panel in the SVR spray booth">
+<meta name="twitter:card" content="summary_large_image">
 <!-- Structured data for Google. Replace the [ ] values with real details before going live. -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AutoBodyShop","name":"SVR – Sienna Vehicle Refinishing","alternateName":"SVR",
@@ -20,27 +25,39 @@
 "address":{"@type":"PostalAddress","streetAddress":"[Address]","addressLocality":"[Parish]","addressRegion":"Jersey","postalCode":"[JE_ ___]","addressCountry":"JE"},
 "telephone":"[+44 1534 000000]",
 "founder":[{"@type":"Person","name":"Guillermo Goveia"},{"@type":"Person","name":"Gabriel Das Neves"}],
+"image":"https://velcia92-design.github.io/taller-pintura-jersey/images/web/og.jpg",
 "sameAs":["https://www.instagram.com/svrje2023/"]}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I have to use my insurer's repairer?","acceptedAnswer":{"@type":"Answer","text":"In most cases you can choose your own repairer. Check your policy, or ask us and we will help."}},
+{"@type":"Question","name":"How long will a repair take?","acceptedAnswer":{"@type":"Answer","text":"Small repairs can take a day or two. Larger jobs depend on parts and damage. We give you a date with your estimate."}},
+{"@type":"Question","name":"Will the colour match?","acceptedAnswer":{"@type":"Answer","text":"We use your car's paint code, test it on a spray-out card and blend into the neighbouring panels. Paint fades over time, so we match what is on your car now."}},
+{"@type":"Question","name":"Is the estimate really free?","acceptedAnswer":{"@type":"Answer","text":"Yes, with no obligation. Photos give a good guide; we confirm in person."}}
+]}
+</script>
+<link rel="preload" href="fonts/Archivo-500_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css?v=20261110">
+<link rel="stylesheet" href="assets/tokens.css?v=20261110">
+<link rel="stylesheet" href="assets/lang.css?v=20261110">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--ink:#08090b;--ink2:#15181e;--sea:#0f2f57;--glass:#e2ebf5;--bone:#f3f2f0;--gold:#0a6fe0;--gold-d:#0858b8;--muted:#4d5560;--line:#d9dde3;
---head:'Archivo','Arial Narrow',system-ui,sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
+:root{--gold:var(--blue);--gold-d:var(--blue-d)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:18px/1.6 var(--body);color:var(--ink);background:var(--bone);padding-bottom:76px;overflow-x:hidden}
 a{color:inherit}
 img{display:block;max-width:100%}
 :focus-visible{outline:3px solid #6db3ff;outline-offset:3px}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:#fff;color:var(--ink);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:16px}
 .w{max-width:1160px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:var(--head);margin:0;line-height:1.02;letter-spacing:-.01em}
-h1{font-size:clamp(2.8rem,9vw,7rem);font-weight:850;font-stretch:115%}
+h1,h2{text-wrap:balance}
+h1{font-size:clamp(2.4rem,6.4vw,5.2rem);font-weight:850;font-stretch:115%;line-height:1.2;text-shadow:0 3px 30px rgba(0,0,0,.45)}
 h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;font-stretch:108%}
 h3{font-size:1.3rem;font-weight:750;line-height:1.2}
-p{margin:0 0 1em;max-width:60ch}
+p{margin:0 0 1em;max-width:60ch;text-wrap:pretty}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font:700 1.05rem var(--body);text-decoration:none;background:var(--gold);color:#fff;border:0;cursor:pointer;transition:transform .25s var(--ease),background .2s}
 .btn:hover{background:var(--gold-d);transform:translateY(-2px)}
 .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
@@ -64,24 +81,32 @@ nav a{text-decoration:none;opacity:.9}nav a:hover{text-decoration:underline;text
 /* hero */
 .hero{position:relative;min-height:100svh;color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
 .hero .bg{position:absolute;inset:-6% 0 -6% 0;will-change:transform}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:kb 2.8s var(--ease) both}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:brightness(.88) contrast(1.03);animation:kb 2.8s var(--ease) both}
 @media(min-width:880px){.hero .bg{left:36%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 32%);mask-image:linear-gradient(90deg,transparent,#000 32%)}.hero .bg img{object-position:40% 50%}}
 @keyframes kb{from{transform:scale(1.14);opacity:0}to{transform:scale(1);opacity:1}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,9,11,.55) 0%,rgba(8,9,11,.2) 35%,rgba(8,9,11,.92) 100%),linear-gradient(90deg,rgba(8,9,11,.7),transparent 70%)}
-.hero .w{position:relative;z-index:2;padding-bottom:72px;padding-top:120px}
-.ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,9,11,.55) 0%,rgba(8,9,11,.2) 35%,rgba(8,9,11,.92) 100%),linear-gradient(90deg,rgba(8,9,11,.96) 0%,rgba(8,9,11,.84) 50%,transparent 82%)}
+.hero .w{position:relative;z-index:2;padding-bottom:56px;padding-top:76px}
+@media(max-width:879px){.hero .w{padding-bottom:136px}}
+.ln{display:block;overflow:hidden;padding:.02em 0 .06em}
 .ln span{display:block;transform:translateY(105%);animation:up 1s var(--ease) forwards}
 .ln:nth-child(2) span{animation-delay:.12s}.ln:nth-child(3) span{animation-delay:.24s}
 @keyframes up{to{transform:none}}
 .fade{opacity:0;transform:translateY(16px);animation:fi .9s var(--ease) .7s forwards}
 .fade.d2{animation-delay:.9s}
 @keyframes fi{to{opacity:1;transform:none}}
-.hero p.sub{font-size:1.25rem;color:#dbe8e8;margin:24px 0 28px;max-width:46ch}
+.hero p.sub{font-size:1.15rem;color:#dbe8e8;margin:14px 0 18px;max-width:54ch}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 .95rem var(--body);letter-spacing:.04em;color:#9fd0ff;margin:0 0 18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:#0a6fe0}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .scroll{position:absolute;right:24px;bottom:34px;z-index:2;width:2px;height:70px;background:rgba(255,255,255,.25);overflow:hidden;display:none}
 .scroll::after{content:"";position:absolute;left:0;top:-30px;width:2px;height:30px;background:var(--gold);animation:sc 1.8s ease-in-out infinite}
 @keyframes sc{to{top:70px}}
 @media(min-width:880px){.scroll{display:block}}
+
+/* trust bar */
+.trustbar{background:var(--ink2);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.trustbar ul{list-style:none;margin:0;padding:14px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;font-size:.95rem;color:#dbe8e8}
+.trustbar li::before{content:"✓";color:#8fd0ff;font-weight:900;margin-right:7px}
 
 /* marquee */
 .marq{background:var(--gold);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0;font:800 1.5rem var(--head);font-stretch:110%}
@@ -109,7 +134,7 @@ section{padding:96px 0}
 .c::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,rgba(8,9,11,.92))}
 .c div{padding:26px}
 .c p{margin:8px 0 0;color:#dbe8e8;font-size:1rem}
-.c small{display:inline-block;margin-top:12px;color:var(--gold);font-weight:700}
+.c small{display:inline-block;margin-top:12px;color:#9fd0ff;font-weight:700}
 
 /* pinned process */
 .proc{background:var(--ink);color:#fff;padding:96px 0 0}
@@ -119,7 +144,7 @@ section{padding:96px 0}
 .pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .9s var(--ease),transform 1.6s var(--ease)}
 .pin img.on{opacity:1;transform:scale(1)}
 .pin .cnt{position:absolute;left:16px;bottom:12px;z-index:3;font:800 1rem var(--head);color:#fff;background:rgba(8,9,11,.8);padding:4px 12px;border-radius:999px}
-.stp{min-height:62vh;display:flex;flex-direction:column;justify-content:center;opacity:.28;transition:opacity .5s;padding:24px 4px}
+.stp{min-height:62vh;display:flex;flex-direction:column;justify-content:center;opacity:.72;transition:opacity .5s;padding:24px 4px}
 .stp.on{opacity:1}
 .stp h3{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:12px}
 .stp p{color:#cfe0e0;font-size:1.12rem}
@@ -152,16 +177,16 @@ section{padding:96px 0}
 .lang:hover{background:rgba(255,255,255,.12)}
 .hdr-r{display:flex;align-items:center;gap:14px}
 /* floating spray-gun button */
-.fab{position:fixed;right:16px;bottom:88px;z-index:45;display:flex;align-items:center;gap:10px;text-decoration:none;transition:opacity .3s,transform .3s}
+.fab{position:fixed;right:14px;bottom:84px;z-index:45;display:flex;align-items:center;gap:10px;text-decoration:none;transition:opacity .3s,transform .3s}
 .fab.gone{opacity:0;pointer-events:none;transform:translateY(12px)}
-.fab .lbl{background:#fff;color:var(--ink);font-weight:700;padding:10px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:1rem;display:none;white-space:nowrap}
-.fab .ico{width:68px;height:68px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 3px #fff,0 10px 28px rgba(0,0,0,.35);transition:transform .25s var(--ease),background .2s}
+.fab .lbl{background:#fff;color:var(--ink);font-weight:700;padding:10px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.95rem;display:none;white-space:nowrap}
+.fab .ico{width:56px;height:56px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 3px #fff,0 10px 28px rgba(0,0,0,.35);transition:transform .25s var(--ease),background .2s}
 .fab:hover .ico,.fab:focus-visible .ico{transform:scale(1.08) rotate(-6deg);background:var(--gold-d)}
-.fab svg{width:40px;height:40px}
+.fab svg{width:32px;height:32px}
 .fab .mist circle{opacity:0;transition:opacity .25s}
 .fab:hover .mist circle,.fab:focus-visible .mist circle,.fab.spray .mist circle{opacity:1}
 .fab:hover .mist circle:nth-child(2){transition-delay:.08s}.fab:hover .mist circle:nth-child(3){transition-delay:.16s}
-@media(min-width:880px){.fab{bottom:24px;right:24px}.fab .lbl{display:block}}
+@media(min-width:880px){.fab{bottom:24px;right:24px}.fab:hover .lbl,.fab:focus-visible .lbl{display:block}}
 
 
 .fab .ico{position:relative}
@@ -189,15 +214,41 @@ section{padding:96px 0}
 .claim-g{display:grid;gap:28px}
 @media(min-width:880px){.claim-g{grid-template-columns:1fr 1fr;align-items:start;gap:60px}}
 .claim h2{font-size:clamp(2.2rem,5.4vw,3.8rem)}
-.claim p{color:#eaf3ff;font-size:1.12rem}
+.claim p{color:#fff;font-size:1.12rem}
 .claim ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:12px}
 .claim li{position:relative;padding-left:34px;font-weight:600}
 .claim li::before{content:"";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:#fff}
 .claim li::after{content:"";position:absolute;left:7px;top:8px;width:8px;height:5px;border-left:2.5px solid var(--gold);border-bottom:2.5px solid var(--gold);transform:rotate(-45deg)}
 .claim .btn{background:#fff;color:var(--ink)}
 .claim .btn:hover{background:#e8eefc}
-.claim .note{color:#d6e7ff;margin-top:14px}
+.claim .note{color:#fff;opacity:.9;margin-top:14px}
 
+/* after a crash */
+.crash{background:#fff;border-top:1px solid var(--line)}
+.crash .steps4{list-style:none;margin:0;padding:0;display:grid;gap:18px;counter-reset:c}
+@media(min-width:880px){.crash .steps4{grid-template-columns:repeat(4,1fr)}}
+.crash .steps4 li{counter-increment:c;background:var(--bone);border:1px solid var(--line);border-radius:16px;padding:22px}
+.crash .steps4 li::before{content:counter(c);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:#fff;font:800 1rem var(--head);margin-bottom:14px}
+.crash h3{font-size:1.12rem;margin-bottom:6px}
+.crash p{color:var(--muted);font-size:.98rem;margin:0}
+.crash .disclaimer{margin-top:18px;max-width:70ch}
+
+/* more services */
+.more{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:24px;font-size:.95rem;color:var(--muted)}
+.more b{color:var(--ink)}
+.more a{padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;font-weight:600}
+
+/* fleet */
+.fleet{background:var(--sea);color:#fff}
+.fleet .w{display:grid;gap:26px}
+@media(min-width:880px){.fleet .w{grid-template-columns:1.2fr .8fr;align-items:center}}
+.fleet p{color:#d7e3f3}
+.fleet .btn{background:#fff;color:var(--ink)}
+.fleet .btn:hover{background:#e8eefc}
+
+/* what to send */
+.sendlist{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;color:#e3f1ef;font-size:.98rem}
+.sendlist li::before{content:"✓";color:#8fd0ff;font-weight:900;margin-right:8px}
 
 /* used car check */
 .used{background:var(--ink);color:#fff}
@@ -330,27 +381,29 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 </style>
 </head>
 <body>
-<div class="mock">MOCKUP: free-licence example photos. [ ] = real workshop details to come.</div>
+<a class="skip" href="#top">Skip to content</a>
+<div class="mock">Mockup: example photos. [ ] = real workshop details to come.</div>
 
 <header id="hd">
  <div class="w">
-  <a class="logo" href="#top"><img src="images/logo.jpg" alt="SVR logo"><span>Sienna Vehicle Refinishing</span></a>
+  <a class="logo" href="#top"><img src="images/web/logo.jpg" alt="SVR logo"><span>Sienna Vehicle Refinishing</span></a>
   <nav id="nav" aria-label="Main"><a href="services.html">Services</a><a href="#process">Process</a><a href="car-check.html">Car Check</a><a href="#standards">Standards</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a class="nav-act" href="tel:+44000000000">Call</a><a class="nav-act wa" href="https://wa.me/44000000000">WhatsApp</a></nav>
   <div class="hdr-r"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><a class="tel" href="tel:+44000000000">[01534 000000]</a><button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button></div>
  </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <div class="hero">
- <div class="bg" id="heroBg"><img src="images/svr-post.jpg" alt="SVR painter spraying a red car panel in the spray booth"></div>
+ <div class="bg" id="heroBg"><img src="images/web/hero.jpg" width="1400" height="1050" alt="SVR painter spraying a car panel in the spray booth"></div>
  <div class="w">
-  <h1 aria-label="Refined over 20 years. Finished to perfection.">
+  <p class="eyebrow">Car body repair &amp; paint · Jersey</p>
+  <h1>
    <span class="ln"><span>Flawless</span></span>
    <span class="ln"><span>finish.</span></span>
    <span class="ln"><span>Every panel.</span></span>
   </h1>
   <p class="sub fade" style="font-weight:600;color:#fff;margin-bottom:6px">Refined over 20 years. Finished to perfection.</p>
-  <p class="sub fade" style="margin-top:0">Car body repair and paint in Jersey, for dents, scratches and accident damage. Colour matched to your paint code, finished so you cannot find the repair, and guaranteed in writing.</p>
+  <p class="sub fade" style="margin-top:0">Car body repair and paint in Jersey for dents, scratches and accident damage. Colour-matched to your paint code, finished so the repair disappears, and guaranteed in writing.</p>
   <div class="cta fade d2">
    <a class="btn" href="#contact">Get a free estimate</a>
    <a class="btn wa" href="https://wa.me/44000000000">WhatsApp your photos</a>
@@ -359,6 +412,12 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  </div>
  <div class="scroll" aria-hidden="true"></div>
 </div>
+
+<div class="trustbar"><div class="w"><ul>
+ <li>Free written estimate</li>
+ <li>Colour-matched to your paint code</li>
+ <li>Written guarantee</li>
+</ul></div></div>
 
 <div class="marq" aria-hidden="true"><div>
  <span>Scratch repair</span><i></i><span>Dent removal</span><i></i><span>Full respray</span><i></i><span>Accident repair</span><i></i><span>Colour matching</span><i></i><span>Alloy wheels</span><i></i><span>Polishing</span><i></i>
@@ -375,11 +434,12 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="services"><div class="w">
  <div class="intro up"><h2>Whatever happened to your car</h2><p>Send us a photo and we will tell you plainly what it needs. Sometimes that is a small repair, not a respray.</p></div>
  <div class="sg">
-  <a class="c up" href="#contact"><img src="images/dent.jpg" alt="Technician removing a dent from a car door panel" loading="lazy"><div><h3>Dents without the respray</h3><p>Paintless dent removal where the paint is unbroken. Panel work where it is not.</p><small>From [£000]</small></div></a>
-  <a class="c up" href="#contact"><img src="images/bumper.jpg" alt="Technician in protective suit spraying a car bumper" loading="lazy"><div><h3>Accident and bumper repair</h3><p>Prepared, primed and painted in a controlled booth, then handled with your insurer if you wish.</p><small>Free estimate</small></div></a>
-  <a class="c up" href="#contact"><img src="images/polish.jpg" alt="Technician polishing a car panel with a machine" loading="lazy"><div><h3>Polish and protect</h3><p>Swirl marks, faded lacquer and light scratches brought back to a mirror shine.</p><small>From [£000]</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/dent.jpg" alt="Technician removing a dent from a car door panel" loading="lazy"><div><h3>Dents without the respray</h3><p>Paintless dent removal where the paint is unbroken. Panel work where it is not.</p><small>From [£000]</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/bumper.jpg" alt="Technician in protective suit spraying a car bumper" loading="lazy"><div><h3>Accident and bumper repair</h3><p>Prepared, primed and painted in a controlled booth, then we deal with your insurer if you wish.</p><small>Free estimate</small></div></a>
+  <a class="c up" href="#contact"><img src="images/web/polish.jpg" alt="Technician polishing a car panel with a machine" loading="lazy"><div><h3>Polish and protect</h3><p>Swirl marks, faded lacquer and light scratches brought back to a mirror shine.</p><small>From [£000]</small></div></a>
  </div>
  <p style="margin-top:26px"><a class="btn" href="services.html">See all services</a></p>
+ <div class="more"><b>Also:</b> <a href="services.html#rust">Rust and underseal</a> <a href="services.html#protection">Paint protection</a> <a href="services.html#fleet">Fleet and trade</a></div>
  <p class="note" style="margin-top:16px">[Confirm with the workshop which services it really offers, and prices.]</p>
 </div></section>
 
@@ -397,16 +457,28 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  </div>
 </div></section>
 
+<section class="crash" id="after-crash"><div class="w">
+ <div class="intro up"><h2>After a crash? Do these four things first.</h2><p>It is stressful. This is the short version, whether you claim or pay yourself.</p></div>
+ <ol class="steps4 up">
+  <li><h3>Check everyone is safe</h3><p>Move to a safe place if you can. Call 999 if anyone is hurt or the road is blocked.</p></li>
+  <li><h3>Photograph everything</h3><p>Both cars, a close-up of the damage, the number plates and the position on the road.</p></li>
+  <li><h3>Swap details</h3><p>Name, phone, insurer and registration for every driver. Note any witnesses.</p></li>
+  <li><h3>Send us the photos</h3><p>We will tell you what needs doing and whether you can choose your own repairer.</p></li>
+ </ol>
+ <p class="note disclaimer">General guidance, not legal or insurance advice. Always check your policy. If anyone is hurt, call 999 first.</p>
+ <p class="up"><a class="btn" href="#contact">Send photos on WhatsApp</a></p>
+</div></section>
+
 <section id="process" class="proc"><div class="w">
  <div class="intro"><h2>How your car comes back perfect</h2><p>Scroll to follow a repair from the first look to the keys in your hand.</p></div>
  <div class="pg">
   <div class="pin" id="pin" aria-hidden="true">
-   <img class="on" src="images/workshop.jpg" alt="">
-   <img src="images/spray.jpg" alt="">
-   <img src="images/closeup.jpg" alt="">
-   <img src="images/booth.jpg" alt="">
-   <img src="images/buff-red.jpg" alt="" style="object-position:50% 30%">
-   <img src="images/blue-garage.jpg" alt="" style="object-position:50% 70%">
+   <img class="on" src="images/web/workshop.jpg" alt="">
+   <img src="images/web/spray.jpg" alt="">
+   <img src="images/web/closeup.jpg" alt="">
+   <img src="images/web/booth.jpg" alt="">
+   <img src="images/web/buff-red.jpg" alt="" style="object-position:50% 30%">
+   <img src="images/web/blue-garage.jpg" alt="" style="object-position:50% 70%">
    <div class="cnt" id="cnt">1 / 6</div>
   </div>
   <div>
@@ -424,14 +496,14 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="work"><div class="w bag">
  <div>
   <div class="ba" id="ba">
-   <img class="bf" src="images/blue-garage.jpg" alt="Car before repair (demo effect)">
+   <img class="bf" src="images/web/blue-garage.jpg" alt="Car before repair (demo effect)">
    <svg class="scr" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><g stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M60 180l70 18M70 195l55 12M80 165l40 8M240 150l60 22M250 170l50 10M270 140l35 12M170 210l44 6"/></g></svg>
-   <img class="af" id="af" src="images/blue-garage.jpg" alt="Car after repair">
+   <img class="af" id="af" src="images/web/blue-garage.jpg" alt="Car after repair">
    <span class="tag" style="left:14px">Before</span><span class="tag" style="right:14px">After</span>
    <div class="hd" id="hd2"></div>
    <input type="range" min="2" max="98" value="50" id="rg" aria-label="Compare before and after">
   </div>
-  <p class="note" style="margin-top:10px">Demo effect on a stock photo. Replace with the workshop’s own before and after photos, with each owner’s permission.</p>
+  <p class="note" style="margin-top:10px">Demo effect on a stock photo. Replace with the workshop’s own before-and-after photos, with each owner’s permission.</p>
  </div>
  <div class="up">
   <h2 style="margin-bottom:16px">See the difference</h2>
@@ -461,7 +533,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
   </div>
   <div class="ub up">
    <h3>Online history check</h3>
-   <p>A history report can show outstanding finance, past write-offs and mileage records, from UK databases.</p>
+   <p>A history report can show outstanding finance, past write-offs and mileage records from UK databases.</p>
    <ul><li>Best for cars with a previous UK registration</li><li>Jersey J registrations may not be covered</li><li>Paid service, run by a third party</li></ul>
    <a class="btn line" href="https://www.carvertical.com/gb" target="_blank" rel="noopener">Check a history online</a>
    <p class="note" style="margin-top:14px">Opens carVertical, an independent website. SVR is not responsible for its reports. [Confirm which provider SVR wants to recommend.]</p>
@@ -473,10 +545,10 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <div class="intro up"><h2>Our standards</h2><p>You expect a repair you cannot spot, and a workshop that keeps its word. This is what we commit to on every job.</p></div>
  <div class="std up">
   <div><h3>A written, itemised estimate</h3><p>The price is agreed before any work starts. If anything changes, we ask you first.</p></div>
-  <div><h3>Colour matched to your paint code</h3><p>Checked on a spray-out card in daylight and blended into the neighbouring panel.</p></div>
+  <div><h3>Colour-matched to your paint code</h3><p>Checked on a spray-out card in daylight and blended into the neighbouring panel.</p></div>
   <div><h3>Progress updates</h3><p>Photos and a message at each stage, by WhatsApp or phone. [To confirm.]</p></div>
   <div><h3>Honest advice</h3><p>If a smaller repair will do, we will tell you, even when it costs us the bigger job.</p></div>
-  <div><h3>Inspected before handover</h3><p>Every panel is checked under bright light before we call you.</p></div>
+  <div><h3>Inspected before handover</h3><p>Every panel is checked in bright light before we call you.</p></div>
   <div><h3>Guaranteed in writing</h3><p>[Guarantee terms to confirm with SVR.]</p></div>
  </div>
  <div class="acc" aria-label="Accreditations"><span>[Insurer approvals, if held]</span><span>[Trade body membership, if held]</span><span>[Manufacturer paint system, if used]</span></div>
@@ -509,16 +581,21 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <p class="note">[Add a short line about their background, and a photo of both if they agree.]</p></div>
 </div></section>
 
+<section class="fleet" id="fleet"><div class="w">
+ <div class="up"><h2>Vans, company cars and small fleets</h2>
+ <p style="margin-top:14px">One contact for bodywork and paint across your vans, company cars or small fleet. Planned around your schedule, with one clear estimate per vehicle. [Confirm with SVR.]</p></div>
+ <div class="up"><a class="btn" href="#contact">Ask about fleet work</a></div>
+</div></section>
 
 <section id="instagram"><div class="w ig">
  <div class="igcard up">
-  <header><img src="images/logo.jpg" alt=""><span>svrje2023<small>Jersey, Channel Islands</small></span></header>
-  <img src="images/svr-post.jpg" alt="SVR painter spraying a red panel in the booth" loading="lazy">
+  <header><img src="images/web/logo.jpg" alt=""><span>svrje2023<small>Jersey, Channel Islands</small></span></header>
+  <img src="images/web/svr-post.jpg" alt="SVR painter spraying a red panel in the booth" loading="lazy">
   <p>Book your appointment now @svrje2023</p>
  </div>
  <div class="up">
   <h2>See the work as it happens</h2>
-  <p style="margin-top:16px;color:var(--muted);font-size:1.15rem">Fresh jobs from the spray booth, before and afters, and the odd classic. Follow SVR on Instagram.</p>
+  <p style="margin-top:16px;color:var(--muted);font-size:1.15rem">Fresh jobs from the spray booth, before-and-after photos, and the odd classic. Follow SVR on Instagram.</p>
   <a class="btn" href="https://www.instagram.com/svrje2023/" target="_blank" rel="noopener">Follow @svrje2023</a>
   <p class="note" style="margin-top:14px">Post shown as published on SVR’s Instagram. [Swap in more posts, or a live feed, later.]</p>
  </div>
@@ -539,20 +616,34 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <details><summary>How long will it take?</summary><p>Small repairs can take a day or two. Larger jobs depend on parts and damage. We give you a date with your estimate.</p></details>
  <details><summary>Will the colour match?</summary><p>We use your car’s paint code, test on a spray-out card and blend into neighbouring panels. Paint fades over time, so we match what is on your car now.</p></details>
  <details><summary>Is the estimate really free?</summary><p>Yes, with no obligation. Photos give a good guide; we confirm in person.</p></details>
- <details><summary>Do you offer a courtesy car?</summary><p>[Confirm availability.] Ask when you book.</p></details>
+ <details><summary>Do you offer a courtesy car, collection or delivery?</summary><p>[Confirm availability.] Ask when you book. If we cannot lend you a car, we will tell you before you leave yours with us.</p></details>
+ <details><summary>Do you repair rust and underseal?</summary><p>Yes. Jersey salt air is hard on sills, arches and the underside. We cut out rust properly and can renew underseal. [Confirm the exact treatment SVR offers.]</p></details>
+ <details><summary>Do you work on hybrids and electric cars?</summary><p>[Confirm with SVR.] We work on all makes and models. For high-voltage work, we would use a qualified specialist and tell you before we start.</p></details>
+ <details><summary>Can you recalibrate driver-assistance systems after a repair?</summary><p>[Confirm with SVR.] Cars with cameras and radar behind the windscreen or bumper often need recalibration after a repair. We can arrange it with a local specialist.</p></details>
+ <details><summary>How do I pay?</summary><p>[Confirm accepted payment methods.] We give you a written estimate first, and an invoice when the car is ready.</p></details>
+ <details><summary>Do you scan the car before and after a repair?</summary><p>[Confirm with SVR.] Modern cars have sensors and computers. If a scan is needed, we arrange it with a local specialist and include it in the estimate.</p></details>
+ <details><summary>How should I look after fresh paint?</summary><p>Do not wash the car for [confirm: about a week], and do not wax or polish it for [confirm: about a month]. We give you written aftercare when you collect.</p></details>
+ <details><summary>What if something is not right after the repair?</summary><p>Tell us straight away. We will look at it and put it right. [Confirm the process.]</p></details>
 </div></section>
 
 <section id="contact" class="contact"><div class="w cg">
  <div>
   <h2>Get a free estimate</h2>
   <p class="lead" style="margin-top:14px">Fill this in and press send. WhatsApp opens with your details ready, so you can add photos of the damage in the same chat. We usually reply within [one working day].</p>
+  <p class="lead" style="margin:18px 0 6px"><b>What to send</b></p>
+  <ul class="sendlist">
+   <li>Your registration and the car’s make and model</li>
+   <li>Three photos: both sides, a close-up of the damage, and the whole car</li>
+   <li>What happened, and your preferred drop-off day</li>
+  </ul>
   <form id="f">
    <div><label for="g">Start with your registration</label>
-    <div class="plate"><input id="g" name="reg" placeholder="J 123456" maxlength="9" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text"></div>
-    <p class="hint">As shown on your Jersey number plate.</p></div>
-   <div><label for="r">Car make and model</label><input id="r" placeholder="e.g. Volkswagen Golf"></div>
-   <div class="two"><div><label for="n">Your name</label><input id="n" autocomplete="name" required></div><div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required></div></div>
-   <div><label for="d">What happened?</label><textarea id="d" rows="3" placeholder="e.g. scraped the rear door in a car park"></textarea></div>
+    <div class="plate"><input id="g" name="reg" placeholder="J 123456" maxlength="9" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-describedby="reghint"></div>
+    <p class="hint" id="reghint">As shown on your Jersey number plate.</p></div>
+   <div><label for="r">Car make and model</label><input id="r" name="car" placeholder="e.g. Volkswagen Golf"></div>
+   <div class="two"><div><label for="n">Your name</label><input id="n" name="name" autocomplete="name" required></div><div><label for="p">Phone</label><input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div></div>
+   <div><label for="d">What happened?</label><textarea id="d" name="damage" rows="3" placeholder="e.g. scraped the rear door in a car park"></textarea></div>
+   <div><label for="pd">Preferred drop-off day (optional)</label><input id="pd" name="date" type="date"></div>
       <div class="ph"><label id="phl" for="ph">Photos of the damage (optional)</label>
     <input id="ph" class="vh" type="file" accept="image/*" multiple>
     <label class="photobtn" for="ph">Add photos</label>
@@ -560,7 +651,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
     <p class="hint" id="phn">Up to 5 photos. They are not uploaded to this website: they only leave your phone through WhatsApp.</p></div>
       <p class="legal">We use your details only to reply to your enquiry. See our <a href="#privacy" style="color:#fff">privacy notice</a>.</p>
    <button class="btn wa" type="submit" style="color:var(--ink)">Send on WhatsApp</button>
-   <p class="alt">No WhatsApp? <a href="#" id="mail">Send it by email instead</a>.</p>
+   <p class="alt">No WhatsApp? <a href="mailto:[email@address]" id="mail">Send it by email instead</a>.</p>
    <div class="ok" id="ok" role="status">WhatsApp is opening with your message. Add photos of the damage in the chat, then press send.</div>
    <div class="ok" id="ok2" role="status">Shared. Make sure you pressed send in WhatsApp.</div>
    <div class="ok" id="ok3" role="status">Email cannot attach photos from this page. Please add them in your email app.</div>
@@ -580,15 +671,18 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <h3>How long we keep it</h3><p>[For example, up to two years after your last job.] Then it is deleted.</p>
  <h3>Who else sees it</h3><p>No one outside SVR, except the services you choose to contact us through. Messages sent by WhatsApp are also handled by WhatsApp (Meta).</p>
  <h3>Your rights</h3><p>You can ask to see, correct or delete your details at any time. If you are unhappy with how we use them, you can complain to the Jersey Office of the Information Commissioner.</p>
- <h3>Cookies</h3><p>This website does not set cookies. It loads its fonts from Google Fonts. [Check before going live.]</p>
+ <h3>Cookies</h3><p>This website does not set cookies and does not load fonts or images from third parties. Everything it needs is served from this site.</p>
+ <h3 id="accessibility">Accessibility</h3><p>We aim to meet WCAG 2.2 AA: readable contrast, keyboard navigation, visible focus, large touch targets and support for reduced motion. If something is hard to use, call us and we will help.</p>
  <p class="note" style="margin-top:20px;color:#7d8896">[Template only. Have it checked against the Data Protection (Jersey) Law 2018 before the site goes live.]</p>
 </div></section>
 </main>
 
-<footer class="foot"><div class="w">© [Year] SVR – Sienna Vehicle Refinishing, Jersey. Owners: Guillermo Goveia and Gabriel Das Neves. [Company registration number]. <a href="#privacy" style="color:#6db3ff">Privacy notice</a></div></footer>
+<footer class="foot"><div class="w">© [Year] SVR – Sienna Vehicle Refinishing, Jersey. Owners: Guillermo Goveia and Gabriel Das Neves. [Company registration number]. <a href="#privacy" style="color:#6db3ff">Privacy notice</a> · <a href="#accessibility" style="color:#6db3ff">Accessibility</a></div></footer>
 <a class="fab" id="fab" href="#contact" aria-label="Book your appointment"><span class="lbl">Book your appointment</span><span class="ico"><i class="puff"></i><i class="puff"></i><i class="puff"></i><i class="puff"></i><i class="puff"></i><svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M29 5h16l-2.5 14H31.5z"/><rect x="14" y="20" width="36" height="11" rx="4.5"/><rect x="7" y="23" width="9" height="5" rx="2"/><path d="M38 31h11l-4.5 24c-.4 2-2 3.2-4 3.2h-2c-2.2 0-3.6-1.6-3.2-3.8z"/><path d="M31 32c-1.2 4 0 8 3 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><g class="mist" fill="#fff"><circle cx="4" cy="22" r="1.8"/><circle cx="2.5" cy="26" r="1.4"/><circle cx="4.5" cy="30" r="1.8"/></g></svg></span></a>
 <div class="bar"><a href="tel:+44000000000">Call</a><a href="https://wa.me/44000000000">WhatsApp</a><a href="#contact">Estimate</a></div>
 
+<script src="assets/translations.js?v=20261110"></script>
+<script src="assets/lang.js?v=20261110"></script>
 <script>
 (function(){
  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -630,7 +724,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  function msg(){
   function v(id){return (document.getElementById(id).value||'').trim()}
   return 'Hello SVR, I would like a free estimate.\n'+
-   'Registration: '+(v('g')||'-')+'\nCar: '+(v('r')||'-')+'\nName: '+v('n')+'\nPhone: '+v('p')+'\nWhat happened: '+(v('d')||'-');
+   'Registration: '+(v('g')||'-')+'\nCar: '+(v('r')||'-')+'\nName: '+v('n')+'\nPhone: '+v('p')+'\nWhat happened: '+(v('d')||'-')+'\nPreferred drop-off: '+(v('pd')||'-');
  }
  var form=document.getElementById('f');
  var photos=[],MAX=5,thumbs=document.getElementById('thumbs'),phn=document.getElementById('phn'),input=document.getElementById('ph');

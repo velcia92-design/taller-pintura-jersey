@@ -17,6 +17,27 @@ Fecha: 2026-11-09. Notas con mis palabras; no se copió texto ni imágenes.
 
 No pude leer: Harwoods (404), Fix Auto (403), ficha Checkatrade (403), web de Falles (no encontrada).
 
+## Webs top revisadas (2026-11-10)
+
+| Web | País | Lo que hacen bien |
+|---|---|---|
+| [Crash Champions](https://www.crashchampions.com/) | EE. UU. | Cita online, estado de la reparación, presupuesto gratis, garantía vitalicia por escrito, pre-scan y post-scan, calibración ADAS, coche de alquiler en el taller, grúa, formas de pago, pinturas al agua, todas las aseguradoras y recambios OEM. |
+| [Gerber Collision & Glass](https://www.gerbercollision.com/) | EE. UU. / Canadá | Presupuesto de colisión online, cita online, garantía vitalicia, acreditaciones (AGRSS, ASE, i-CAR), financiación, Tesla authorized, formulario de opinión. |
+| [CARSTAR](https://www.carstar.com/) | EE. UU. / Canadá | Buscador de taller, financiación, mensaje tranquilo («We'll take it from here») y servicios muy claros. |
+
+Patrones que sí encajan con SVR y ya están en la web:
+
+- Presupuesto gratis y cita/pedido de día preferido sin backend.
+- Explicar el proceso paso a paso y qué enviar por WhatsApp.
+- Ayuda con el seguro y actualizaciones por WhatsApp.
+- Garantía por escrito y estándares concretos.
+- Antes/después, Instagram y reseñas.
+- Guía «qué hacer tras un golpe» y preguntas frecuentes.
+- Coche de sustitución, recogida/entrega, flotas, óxido, protección de pintura y ADAS (marcados para confirmar con SVR).
+- Accesibilidad, contraste, carga rápida y datos estructurados para Google.
+
+No copiamos: garantía vitalicia, financiación, grúa, calibración propia ni acreditaciones. SVR no las ha confirmado.
+
 ## Patrones comunes (lo que debe tener la página)
 
 1. **Botón de llamar y WhatsApp** siempre visible (en móvil, fijo abajo).

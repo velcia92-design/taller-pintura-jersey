@@ -3,28 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVR Car Check</title>
-<meta name="description" content="SVR Car Check: an independent bodywork and condition report for used cars in Jersey, carried out in person by SVR – Sienna Vehicle Refinishing.">
+<title>Used Car Bodywork Check in Jersey | SVR Car Check</title>
+<meta name="description" content="SVR Car Check: an independent bodywork and condition report for used cars in Jersey, carried out in person by SVR – Sienna Vehicle Refinishing. Paint depth, accident signs, rust and a photo report.">
 <meta name="theme-color" content="#08090b">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="images/web/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/web/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SVR – Sienna Vehicle Refinishing">
+<meta property="og:title" content="Used Car Bodywork Check in Jersey | SVR Car Check">
+<meta property="og:description" content="Know the car before you buy it. Paint depth, accident signs, rust and a photo report from SVR.">
+<meta property="og:image" content="https://velcia92-design.github.io/taller-pintura-jersey/images/web/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Pre-purchase car bodywork inspection","provider":{"@type":"AutoBodyShop","name":"SVR – Sienna Vehicle Refinishing","areaServed":"Jersey, Channel Islands"},"areaServed":{"@type":"Place","name":"Jersey, Channel Islands"},"url":"https://velcia92-design.github.io/taller-pintura-jersey/car-check.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does the seller need to agree?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most honest sellers are happy to. If a seller refuses an independent check, that tells you something too."}},
+{"@type":"Question","name":"Will you repair what you find?","acceptedAnswer":{"@type":"Answer","text":"Only if you ask. The report is independent, and you are free to get repairs done anywhere."}}
+]}
+</script>
+<link rel="preload" href="fonts/Archivo-500_900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css?v=20261110">
+<link rel="stylesheet" href="assets/tokens.css?v=20261110">
+<link rel="stylesheet" href="assets/lang.css?v=20261110">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--ink:#08090b;--ink2:#15181e;--blue:#0a6fe0;--blue-d:#0858b8;--sky:#6db3ff;--bone:#f3f2f0;--muted:#4d5560;--line:#d9dde3;
---ok:#3aa76d;--warn:#e0a526;--bad:#e0563b;
---head:'Archivo','Arial Narrow',system-ui,sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:18px/1.6 var(--body);color:var(--ink);background:var(--bone);padding-bottom:76px;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:#fff;color:var(--ink);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:16px}
 .w{max-width:1160px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:var(--head);margin:0;line-height:1.04;letter-spacing:-.01em}
+h1,h2{text-wrap:balance}
 h1{font-size:clamp(2.6rem,8vw,5.6rem);font-weight:850;font-stretch:115%}
 h2{font-size:clamp(1.9rem,4.8vw,3.2rem);font-weight:800;font-stretch:108%}
 h3{font-size:1.25rem;font-weight:750;line-height:1.2}
-p{margin:0 0 1em;max-width:62ch}
+p{margin:0 0 1em;max-width:62ch;text-wrap:pretty}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;font:700 1.05rem var(--body);text-decoration:none;background:var(--blue);color:#fff;border:0;cursor:pointer;transition:transform .25s var(--ease),background .2s}
 .btn:hover{background:var(--blue-d);transform:translateY(-2px)}
 .btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
@@ -63,7 +82,7 @@ header .w{display:flex;align-items:center;justify-content:space-between;gap:16px
 .map .glass{fill:#2a3442}
 .readout{color:#fff}
 .readout .tag{display:inline-block;font:700 .8rem var(--body);padding:3px 10px;border-radius:999px;background:#2a3140;color:#c9d2de;margin-bottom:10px}
-.readout h3{font-size:1.4rem;margin-bottom:6px}
+.readout h3,.readout .ro-name{font:750 1.4rem var(--head);margin:0 0 6px;line-height:1.2}
 .readout .num{font:850 2.6rem var(--head);font-stretch:110%;line-height:1}
 .readout .num small{font-size:1rem;font-weight:600;color:#8b97a8;margin-left:4px}
 .readout p{color:#c9d2de;font-size:.98rem;margin:8px 0 0}
@@ -140,15 +159,16 @@ footer a{color:var(--sky)}
 </style>
 </head>
 <body>
-<div class="mock">MOCKUP: concept page. Sample report only, not a real vehicle. [ ] = to confirm with SVR.</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="mock">Mockup: concept page. Sample report only, not a real vehicle. [ ] = to confirm with SVR.</div>
 
 <header id="hd"><div class="w">
- <a class="logo" href="index.html"><img src="images/logo.jpg" alt="SVR logo"><span>SVR Car Check</span></a>
+ <a class="logo" href="index.html"><img src="images/web/logo.jpg" alt="SVR logo"><span>SVR Car Check</span></a>
  <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="services.html">Services</a><a href="car-check.html" aria-current="page">Car Check</a><a href="index.html#contact">Contact</a><a class="nav-act" href="tel:+44000000000">Call</a><a class="nav-act wa" href="https://wa.me/44000000000">WhatsApp</a></nav>
  <div class="hdr-r"><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button></div>
 </div></header>
 
-<main>
+<main id="main" tabindex="-1">
 <div class="hero"><div class="w g">
  <div>
   <h1>Know the car before you buy it.</h1>
@@ -260,6 +280,8 @@ footer a{color:var(--sky)}
 <footer><div class="w">SVR Car Check is a service of SVR – Sienna Vehicle Refinishing, Jersey. <a href="services.html">Our services</a> · <a href="index.html">Back to SVR</a> · <a href="index.html#privacy">Privacy notice</a></div></footer>
 <div class="bar"><a href="#bk">Book a Car Check</a><a href="https://wa.me/44000000000">WhatsApp</a></div>
 
+<script src="assets/translations.js?v=20261110"></script>
+<script src="assets/lang.js?v=20261110"></script>
 <script>
 (function(){
  /* reveal */
@@ -272,7 +294,7 @@ footer a{color:var(--sky)}
  var pn=document.querySelectorAll('.pn'),ro=document.getElementById('ro'),cur=null;
  function t(s){return window.SVR_T?window.SVR_T(s):s}
  function show(el){cur=el;pn.forEach(function(x){x.classList.toggle('sel',x===el)});var s=el.dataset.s,v=el.dataset.v;
-  ro.innerHTML='<span class="tag">'+t('Sample reading')+'</span><h3>'+t(el.dataset.p)+'</h3>'+(v==='\u2014'?'<div class="num" style="font-size:1.6rem">'+t('Plastic')+'</div><p>'+t('Bumpers are plastic, so we inspect them visually.')+'</p>':'<div class="num" style="color:'+C[s]+'">'+v+'<small>\u00b5m</small></div><p><b style="color:'+C[s]+'">'+t(T[s]+'.')+'</b> '+t(D[s])+'</p>')}
+  ro.innerHTML='<span class="tag">'+t('Sample reading')+'</span><p class="ro-name">'+t(el.dataset.p)+'</p>'+(v==='\u2014'?'<div class="num" style="font-size:1.6rem">'+t('Plastic')+'</div><p>'+t('Bumpers are plastic, so we inspect them visually.')+'</p>':'<div class="num" style="color:'+C[s]+'">'+v+'<small>\u00b5m</small></div><p><b style="color:'+C[s]+'">'+t(T[s]+'.')+'</b> '+t(D[s])+'</p>')}
  pn.forEach(function(el){el.style.fill=C[el.dataset.s];el.setAttribute('role','button');el.setAttribute('aria-label',el.dataset.p);
   el.addEventListener('click',function(){show(el)});el.addEventListener('mouseenter',function(){show(el)});
   el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(el)}})});
