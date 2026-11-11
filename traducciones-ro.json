@@ -413,7 +413,7 @@
  "Three photos: both sides, a close-up of the damage, and the whole car": "Trei fotografii: ambele părți, avaria de aproape și mașina întreagă",
  "What happened, and your preferred drop-off day": "Ce s-a întâmplat și ziua în care preferi să lași mașina",
  "Preferred drop-off day (optional)": "Ziua preferată pentru predare (opțional)",
- "Cookies": "Cookies",
+ "Cookies": "Cookie-uri",
  "This website does not set cookies and does not load fonts or images from third parties. Everything it needs is served from this site.": "Acest site nu folosește cookies și nu încarcă fonturi sau imagini de la terți. Tot ce are nevoie este servit de pe acest site.",
  "Accessibility": "Accesibilitate",
  "We aim to meet WCAG 2.2 AA: readable contrast, keyboard navigation, visible focus, large touch targets and support for reduced motion. If something is hard to use, call us and we will help.": "Ne propunem să respectăm WCAG 2.2 AA: contrast lizibil, navigare cu tastatura, focus vizibil, butoane mari și respect pentru mișcarea redusă. Dacă ceva este greu de folosit, sună-ne și te ajutăm.",
@@ -475,5 +475,15 @@
  "Scraped in a St Helier car park?": "Zgârietură într-o parcare din St Helier?",
  "Salt air eating your wheel arches?": "Aerul sărat îți mănâncă aripile?",
  "Lost an argument with a granite wall?": "Ai pierdut o dispută cu un zid de granit?",
- "Door dinged at the supermarket?": "Lovitură de ușă la supermarket?"
+ "Door dinged at the supermarket?": "Lovitură de ușă la supermarket?",
+ "Cookies and local storage": "Cookie-uri și stocare locală",
+ "This site does not use advertising, analytics or tracking cookies.": "Acest site nu folosește cookie-uri de publicitate, de analiză sau de urmărire.",
+ "Your language choice": "Alegerea limbii",
+ "When you choose a language, your browser saves a small preference called svr-lang. It stays on your device, never reaches us, and you can delete it at any time.": "Când alegi o limbă, browserul salvează o preferință mică numită svr-lang. Rămâne pe dispozitivul tău, nu ajunge la noi și o poți șterge oricând.",
+ "Third parties": "Terți",
+ "Nothing is loaded from another company: fonts, images and scripts come from this site. WhatsApp and Instagram only receive your data if you tap their links, and then their own privacy policies apply.": "Nu se încarcă nimic de la altă companie: fonturile, imaginile și scripturile vin de pe acest site. WhatsApp și Instagram primesc datele tale doar dacă apeși pe linkurile lor, iar atunci se aplică politicile lor.",
+ "How to delete it": "Cum se șterge",
+ "Clear the site data in your browser settings. The site will simply start in English again.": "Șterge datele site-ului din setările browserului. Site-ul va porni din nou în engleză.",
+ "Why there is no cookie banner": "De ce nu există banner de cookie-uri",
+ "Because there is nothing to consent to: no cookies, no tracking, no advertising.": "Pentru că nu este nimic de acceptat: fără cookie-uri, fără urmărire, fără publicitate."
 }

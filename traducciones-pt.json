@@ -481,5 +481,15 @@
  "Scraped in a St Helier car park?": "Um risco num parque de estacionamento em St Helier?",
  "Salt air eating your wheel arches?": "O sal do mar está a comer as cavas das rodas?",
  "Lost an argument with a granite wall?": "Perdeu uma discussão com um muro de granito?",
- "Door dinged at the supermarket?": "Uma pancada de porta no supermercado?"
+ "Door dinged at the supermarket?": "Uma pancada de porta no supermercado?",
+ "Cookies and local storage": "Cookies e armazenamento local",
+ "This site does not use advertising, analytics or tracking cookies.": "Este site não usa cookies de publicidade, de analítica nem de seguimento.",
+ "Your language choice": "A sua escolha de idioma",
+ "When you choose a language, your browser saves a small preference called svr-lang. It stays on your device, never reaches us, and you can delete it at any time.": "Quando escolhe um idioma, o navegador guarda uma pequena preferência chamada svr-lang. Fica no seu dispositivo, não chega até nós e pode apagá-la quando quiser.",
+ "Third parties": "Terceiros",
+ "Nothing is loaded from another company: fonts, images and scripts come from this site. WhatsApp and Instagram only receive your data if you tap their links, and then their own privacy policies apply.": "Não é carregado nada de outra empresa: os tipos de letra, as imagens e os scripts vêm deste site. O WhatsApp e o Instagram só recebem os seus dados se tocar nos respetivos links, e nesse caso aplicam-se as políticas deles.",
+ "How to delete it": "Como apagar",
+ "Clear the site data in your browser settings. The site will simply start in English again.": "Apague os dados do site nas definições do navegador. O site volta a começar em inglês.",
+ "Why there is no cookie banner": "Porque não há aviso de cookies",
+ "Because there is nothing to consent to: no cookies, no tracking, no advertising.": "Porque não há nada para autorizar: nem cookies, nem seguimento, nem publicidade."
 }

@@ -413,7 +413,7 @@
  "Three photos: both sides, a close-up of the damage, and the whole car": "Trzy zdjęcia: oba boki, uszkodzenie z bliska i całe auto",
  "What happened, and your preferred drop-off day": "Co się stało i w jaki dzień chcesz zostawić auto",
  "Preferred drop-off day (optional)": "Preferowany dzień oddania auta (opcjonalnie)",
- "Cookies": "Cookies",
+ "Cookies": "Pliki cookie",
  "This website does not set cookies and does not load fonts or images from third parties. Everything it needs is served from this site.": "Ta strona nie używa cookies ani nie ładuje czcionek i obrazów od firm trzecich. Wszystko jest serwowane z tej strony.",
  "Accessibility": "Dostępność",
  "We aim to meet WCAG 2.2 AA: readable contrast, keyboard navigation, visible focus, large touch targets and support for reduced motion. If something is hard to use, call us and we will help.": "Chcemy spełniać WCAG 2.2 AA: czytelny kontrast, obsługa klawiaturą, widoczny fokus, duże przyciski i poszanowanie ograniczenia ruchu. Jeśli coś jest trudne w użyciu, zadzwoń, a pomożemy.",
@@ -475,5 +475,15 @@
  "Scraped in a St Helier car park?": "Otarcie na parkingu w St Helier?",
  "Salt air eating your wheel arches?": "Morska sól zjada nadkola?",
  "Lost an argument with a granite wall?": "Przegrana kłótnia z granitowym murkiem?",
- "Door dinged at the supermarket?": "Wgniecenie od drzwi pod supermarketem?"
+ "Door dinged at the supermarket?": "Wgniecenie od drzwi pod supermarketem?",
+ "Cookies and local storage": "Pliki cookie i pamięć lokalna",
+ "This site does not use advertising, analytics or tracking cookies.": "Ta strona nie używa plików cookie reklamowych, analitycznych ani śledzących.",
+ "Your language choice": "Twój wybór języka",
+ "When you choose a language, your browser saves a small preference called svr-lang. It stays on your device, never reaches us, and you can delete it at any time.": "Gdy wybierzesz język, przeglądarka zapisuje niewielkie ustawienie o nazwie svr-lang. Zostaje ono na Twoim urządzeniu, nie trafia do nas i możesz je w każdej chwili usunąć.",
+ "Third parties": "Podmioty trzecie",
+ "Nothing is loaded from another company: fonts, images and scripts come from this site. WhatsApp and Instagram only receive your data if you tap their links, and then their own privacy policies apply.": "Nic nie jest ładowane od innych firm: czcionki, obrazy i skrypty pochodzą z tej strony. WhatsApp i Instagram otrzymują Twoje dane tylko wtedy, gdy klikniesz ich linki — wtedy obowiązują ich własne zasady prywatności.",
+ "How to delete it": "Jak to usunąć",
+ "Clear the site data in your browser settings. The site will simply start in English again.": "Wyczyść dane strony w ustawieniach przeglądarki. Strona po prostu zacznie się po angielsku.",
+ "Why there is no cookie banner": "Dlaczego nie ma banera cookies",
+ "Because there is nothing to consent to: no cookies, no tracking, no advertising.": "Bo nie ma na co wyrazić zgody: żadnych plików cookie, żadnego śledzenia, żadnych reklam."
 }
