@@ -376,6 +376,26 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 .bar a:nth-child(3){background:#25d366;color:var(--ink)}
 @media(min-width:880px){.bar{display:none}body{padding-bottom:0}}
 
+.quips{position:relative;display:block;min-height:1.6em;margin:14px 0 0;font:700 1.1rem var(--body);color:#8fd0ff}
+.quips span{position:absolute;left:0;top:0;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.quips span.on{opacity:1;transform:none}
+.reply{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;padding:6px 14px;border-radius:999px;background:rgba(143,208,255,.14);color:#fff;font-weight:700;font-size:.95rem}
+.reply::before{content:"";width:8px;height:8px;border-radius:50%;background:#25d366}
+.inwriting{margin:18px 0 6px;padding:14px 16px;border-left:4px solid #8fd0ff;background:rgba(255,255,255,.06);border-radius:0 12px 12px 0;color:#d7ece8}
+.inwriting b{display:block;color:#fff;margin-bottom:4px}
+.track{margin-top:40px}
+.track h3{margin-bottom:16px}
+.track ol{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:t}
+.track li{position:relative;display:flex;align-items:center;gap:12px;font-weight:700;counter-increment:t}
+.track li::before{content:counter(t);flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:.95rem}
+.track li:last-child::before{content:"✓";background:#25d366;color:var(--ink)}
+.track p{margin:16px 0 0;color:var(--muted)}
+@media(min-width:800px){
+ .track ol{grid-template-columns:repeat(5,1fr);gap:0}
+ .track li{flex-direction:column;text-align:center;gap:10px}
+ .track li:not(:last-child)::after{content:"";position:absolute;top:18px;left:calc(50% + 24px);right:calc(-50% + 24px);height:2px;background:var(--line)}
+}
+
 @media(prefers-reduced-motion:reduce){
  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
  .ln span,.fade{transform:none;opacity:1}.js .rv{clip-path:none}.js .up{opacity:1;transform:none}.marq div{animation:none}
@@ -404,6 +424,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
    <span class="ln"><span>finish.</span></span>
    <span class="ln"><span>Every panel.</span></span>
   </h1>
+  <p class="quips fade" id="quips" aria-hidden="true"><span class="on">Scraped in a St Helier car park?</span><span>Salt air eating your wheel arches?</span><span>Lost an argument with a granite wall?</span><span>Door dinged at the supermarket?</span></p>
   <p class="sub fade" style="font-weight:600;color:#fff;margin-bottom:6px">Refined over 20 years. Finished to perfection.</p>
   <p class="sub fade" style="margin-top:0">Car body repair and paint in Jersey for dents, scratches and accident damage. Colour-matched to your paint code, finished so the repair disappears, and guaranteed in writing.</p>
   <div class="cta fade d2">
@@ -419,6 +440,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  <li>Free written estimate</li>
  <li>Colour-matched to your paint code</li>
  <li>Written guarantee</li>
+ <li>Reply within [one working day]</li>
 </ul></div></div>
 
 <div class="marq" aria-hidden="true"><div>
@@ -553,6 +575,11 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
   <div><h3>Inspected before handover</h3><p>Every panel is checked in bright light before we call you.</p></div>
   <div><h3>Guaranteed in writing</h3><p>[Guarantee terms to confirm with SVR.]</p></div>
  </div>
+ <div class="track up">
+  <h3>Follow your repair</h3>
+  <ol><li>Car received</li><li>Being repaired</li><li>In the paint booth</li><li>Final check</li><li>Ready to collect</li></ol>
+  <p>At each step you get a photo and a short message by WhatsApp. [To confirm with SVR.]</p>
+ </div>
  <div class="acc" role="group" aria-label="Accreditations"><span>[Insurer approvals, if held]</span><span>[Trade body membership, if held]</span><span>[Manufacturer paint system, if used]</span></div>
  <p class="note" style="margin-top:12px">Only show an accreditation once SVR can prove it. Better a short, true list than a long one.</p>
 </div></section>
@@ -631,6 +658,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <section id="contact" class="contact"><div class="w cg">
  <div>
   <h2>Get a free estimate</h2>
+  <p class="reply">Reply within [one working day]</p>
   <p class="lead" style="margin-top:14px">Fill this in and press send. WhatsApp opens with your details ready, so you can add photos of the damage in the same chat. We usually reply within [one working day].</p>
   <p class="lead" style="margin:18px 0 6px"><b>What to send</b></p>
   <ul class="sendlist">
@@ -638,6 +666,7 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
    <li>Three photos: both sides, a close-up of the damage, and the whole car</li>
    <li>What happened, and your preferred drop-off day</li>
   </ul>
+  <p class="inwriting"><b>Your estimate in writing</b>Before any work starts, we send you the estimate in writing, by email or as a PDF. Everything we agree stays on record.</p>
   <form id="f">
    <div><label for="g">Start with your registration</label>
     <div class="plate"><input id="g" name="reg" placeholder="J 123456" maxlength="9" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-describedby="reghint"></div>
@@ -688,6 +717,8 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 <script>
 (function(){
  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ var qs=document.querySelectorAll('#quips span'),qi=0;
+ if(!rm&&qs.length>1)setInterval(function(){qs[qi].classList.remove('on');qi=(qi+1)%qs.length;qs[qi].classList.add('on')},3500);
  var hd=document.getElementById('hd'),bg=document.getElementById('heroBg'),ticking=false;
  function onS(){var y=scrollY;hd.classList.toggle('solid',y>60);if(!rm&&y<innerHeight*1.2)bg.style.transform='translate3d(0,'+(y*.28)+'px,0)';ticking=false}
  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onS)}},{passive:true});onS();
