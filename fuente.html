@@ -391,8 +391,9 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
 .track h3{margin-bottom:16px}
 .track ol{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:t}
 .track li{position:relative;display:flex;align-items:center;gap:12px;font-weight:700;counter-increment:t}
-.track li::before{content:counter(t);flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:.95rem}
-.track li:last-child::before{content:"✓";background:#25d366;color:var(--ink)}
+.track li::before{content:counter(t);flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--step,var(--blue));color:#fff;font-size:.95rem}
+.track li:nth-child(1){--step:#0e7490}.track li:nth-child(2){--step:#6d28d9}.track li:nth-child(3){--step:#b45309}.track li:nth-child(4){--step:#be123c}.track li:nth-child(5){--step:#047857}
+.track li:last-child::before{content:"✓";background:#25d366;color:#08120c}
 .track p{margin:16px 0 0;color:var(--muted)}
 @media(min-width:800px){
  .track ol{grid-template-columns:repeat(5,1fr);gap:0}
