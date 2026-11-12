@@ -15,6 +15,7 @@ are kept untouched for the workshop to replace later.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -29,6 +30,15 @@ PAGES = {
 }
 
 LANGS = ("es", "pt", "pl", "ro")
+
+
+def asset_version() -> str:
+    """Short hash of the shared assets, used to bust browser caches."""
+    h = hashlib.sha1()
+    for name in ("assets/translations.js", "assets/tokens.css", "assets/lang.css",
+                 "assets/lang.js", "fonts/fonts.css"):
+        h.update((ROOT / name).read_bytes())
+    return h.hexdigest()[:10]
 
 
 def build_translations() -> None:
@@ -59,13 +69,14 @@ def check_assets(html: str, page: str) -> list[str]:
     return missing
 
 
-def build_pages() -> list[str]:
+def build_pages(version: str) -> list[str]:
     missing = []
     built = []
     for source, target in PAGES.items():
         src = ROOT / source
         dst = ROOT / target
         html = src.read_text(encoding="utf-8")
+        html = re.sub(r"\?v=[0-9A-Za-z]+", "?v=" + version, html)
         dst.write_text(html, encoding="utf-8")
         built.append((target, html))
         print(f"page: {source} -> {target} ({dst.stat().st_size / 1024:.0f} KB)")
@@ -77,7 +88,7 @@ def build_pages() -> list[str]:
 
 def main() -> int:
     build_translations()
-    missing = build_pages()
+    missing = build_pages(asset_version())
     if missing:
         print("\nMissing files:", file=sys.stderr)
         for item in missing:

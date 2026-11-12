@@ -72,7 +72,7 @@ Enlaces comprobados (responden 200). Sirven para copiar ideas, no textos ni foto
 
 | Web | Lo que hacen bien |
 |---|---|
-| [prestigepaintwork.co.uk](https://prestigepaintwork.co.uk/) | Garantía de por vida, 80 años combinados, trato del siniestro con el seguro |
+| ~~prestigepaintwork.co.uk~~ | **No usar: la web está infectada con spam de relojes falsos.** Se cita solo como aviso de seguridad. |
 | [peacockprestige.com](https://peacockprestige.com/) | Servicios por tipo de coche y restauración clásica con nivel concurso |
 | [shorade.co.uk](https://www.shorade.co.uk/) | Aprobaciones de Rolls-Royce, Lamborghini, Tesla; «puedes elegir quién repara tu coche» |
 | [chartwells.net](https://www.chartwells.net/) | Páginas técnicas: ADAS, aluminio estructural, fibra de carbono |

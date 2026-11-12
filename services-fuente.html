@@ -88,6 +88,14 @@ section{padding:80px 0}
 .facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:1rem}
 .facts span{color:var(--muted)}
 .facts b{text-align:right}
+.inc{display:grid;gap:34px;margin-top:34px}
+@media(min-width:880px){.inc{grid-template-columns:1fr 1fr;gap:64px}}
+.inc h3{font-size:1.2rem;margin-bottom:16px}
+.inc ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.inc li{position:relative;padding-left:32px;color:#cfd8e3}
+.inc li::before{position:absolute;left:0;top:0;font-weight:900;font-size:1.05rem}
+.inc .yes li::before{content:"✓";color:#34d399}
+.inc .no li::before{content:"–";color:#fca5a5}
 .alt{background:#fff}
 .dark{background:var(--ink);color:#fff}
 .dark p{color:#c9d2de}
@@ -215,6 +223,26 @@ footer a{color:var(--sky)}
   <p class="lead">Swirl marks, faded lacquer and light scratches removed by machine, with no paint added. The gloss comes back, and so does the depth of colour.</p>
   <ul class="facts"><li><span>Time</span><b>A guide only; we give you a date once we see the car</b></li><li><span>Price</span><b>Free estimate; price after we see the damage</b></li><li><span>Best for</span><b>Dull or swirled paint</b></li></ul>
   <a class="btn" href="index.html#contact">Get an estimate</a>
+ </div>
+</div></section>
+
+
+<section class="dark"><div class="w">
+ <div class="intro up"><h2>What every repair includes</h2><p>The same standard whether it is a scuff or a full respray. If something is not included, we say so before you leave the car.</p></div>
+ <div class="inc up">
+  <div class="yes"><h3>Included as standard</h3><ul>
+   <li>A written estimate before any work starts</li>
+   <li>Paint matched to your car’s paint code</li>
+   <li>Photos at each stage [Confirm with SVR.]</li>
+   <li>A final check in daylight before handover</li>
+   <li>A written guarantee [Confirm the length and what it covers.]</li>
+  </ul></div>
+  <div class="no"><h3>Not included unless we agree it</h3><ul>
+   <li>A courtesy car, unless we confirm one when you book</li>
+   <li>Collection and delivery outside [the parish area]</li>
+   <li>Recovery after an accident (we can arrange it)</li>
+   <li>Extra work found once the car is apart — we ask you first</li>
+  </ul></div>
  </div>
 </div></section>
 
