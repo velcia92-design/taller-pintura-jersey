@@ -39,6 +39,7 @@
 - [ ] Fotos y vídeos reales del taller (la foto del hero es de stock)
 - [ ] El archivo original de la foto del pintor (la captura se ve borrosa)
 - [ ] 4 a 6 trabajos con foto de antes y después (con permiso de cada dueño)
+- [ ] Sustituir las 6 tarjetas de ejemplo de la galería «Trabajos recientes»
 - [ ] Enlace a su perfil de Google con reseñas
 - [ ] Reseñas reales (ahora son de ejemplo)
 
