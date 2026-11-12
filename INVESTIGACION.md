@@ -52,3 +52,65 @@ No copiamos: garantía vitalicia, financiación, grúa, calibración propia ni a
 
 ## Diferencia clave en Jersey
 Los talleres locales que vi tienen webs sencillas, sin formulario, sin reseñas y sin galería. Una página con WhatsApp + formulario con fotos + antes/después + reseñas ya destaca.
+
+## Referencias verificadas (2026-11-12)
+
+Enlaces comprobados (responden 200). Sirven para copiar ideas, no textos ni fotos.
+
+### Jersey: competencia directa
+
+| Web | Lo que hacen bien | Qué mejoraríamos |
+|---|---|---|
+| [vehicleworkshop.je](https://vehicleworkshop.je/) | 40 años, lista de equipamiento (horno, alineador, diagnóstico), sala de espera, coche de cortesía | Diseño anticuado, sin fotos de trabajos |
+| [falles.co.uk/accident-repair](https://www.falles.co.uk/accident-repair/) | 100 años, negocio familiar, servicios muy completos, SEO local | Texto largo y genérico |
+| [martinfernandoltd.co.uk](https://www.martinfernandoltd.co.uk/) | Recogida 24/7, Ceramic Pro, menú de servicios, FAQ | Ruido visual y muchos colores |
+| [belroyalmotors.com](https://belroyalmotors.com/accident-and-repair-centre/) | Aprobaciones de marca (Mazda, Kia, Fiat, Alfa) y aseguradoras | Poca prueba visual |
+| [cccentre.co.uk](https://www.cccentre.co.uk/) | BSI PAS 125, lista de aseguradoras, FAQ claras | Web muy básica |
+| [trustfordjersey.co.uk](https://www.trustfordjersey.co.uk/servicing-and-parts/accident-repair/) | Coche de cortesía, híbridos, flotas, aprobaciones | Corporativo y frío |
+
+### Reino Unido: diseño y confianza
+
+| Web | Lo que hacen bien |
+|---|---|
+| [prestigepaintwork.co.uk](https://prestigepaintwork.co.uk/) | Garantía de por vida, 80 años combinados, trato del siniestro con el seguro |
+| [peacockprestige.com](https://peacockprestige.com/) | Servicios por tipo de coche y restauración clásica con nivel concurso |
+| [shorade.co.uk](https://www.shorade.co.uk/) | Aprobaciones de Rolls-Royce, Lamborghini, Tesla; «puedes elegir quién repara tu coche» |
+| [chartwells.net](https://www.chartwells.net/) | Páginas técnicas: ADAS, aluminio estructural, fibra de carbono |
+| [prestige-bodyshop.com](https://www.prestige-bodyshop.com/) | Proceso en 4 pasos y llamada a la acción repetida |
+| [chromaconcepts.co.uk](https://www.chromaconcepts.co.uk/) | Aprobación McLaren y formulario de presupuesto |
+| [prestige-restoration.co.uk](https://www.prestige-restoration.co.uk/) | Un caso por coche restaurado, con historia y fotos |
+
+### Estados Unidos: conversión y velocidad
+
+| Web | Lo que hacen bien |
+|---|---|
+| [bullerautomotive.com](https://bullerautomotive.com/) | 100 en PageSpeed, reserva por taller y llamada directa |
+| [elitedentsolutions.com](https://elitedentsolutions.com/) | Formulario con fotos para PDR y granizo |
+| [wreckeffects.com](https://wreckeffects.com/) | Presupuesto gratis como única acción principal |
+| [gerbercollision.com](https://www.gerbercollision.com/) | Cita online, garantía vitalicia, acreditaciones |
+| [serviceking.com](https://www.serviceking.com/) | Localizador de talleres y estado de la reparación |
+
+### Car Check y pintura
+
+| Web | Lo que hacen bien |
+|---|---|
+| [theaa.com/vehicle-inspections](https://www.theaa.com/vehicle-inspections) | Niveles de inspección y qué cubre cada uno |
+| [carvertical.com/gb](https://www.carvertical.com/gb) | Informe de historial explicado con ejemplos |
+| [topazdetailing.com](https://www.topazdetailing.com/) | Protección de pintura y detallado con acabado premium |
+| [thewheelspecialist.co.uk](https://www.thewheelspecialist.co.uk/) | Antes/después de llantas y reserva por sucursal |
+
+### Qué copiar en SVR
+
+1. Ficha por servicio: qué incluye, cuánto tarda, desde cuánto y qué no incluye.
+2. Proceso con estado visible (ya lo tenemos) y aviso por WhatsApp en cada paso.
+3. Garantía escrita con condiciones concretas.
+4. Aprobaciones y aseguradoras reales, con nombre y logo.
+5. Galería por trabajo: coche, daño, tiempo y resultado.
+6. Presupuesto con fotos en dos toques.
+
+### Qué no copiar
+
+- Párrafos de relleno y superlativos sin prueba.
+- Sliders automáticos y menús profundos.
+- Fotos de stock o de otro taller.
+- Popups de descuento y contadores falsos.
