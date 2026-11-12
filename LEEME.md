@@ -25,6 +25,7 @@ El script copia las fuentes, genera `assets/translations.js` desde los `traducci
 - `fonts/` — Archivo y Source Sans 3, servidas localmente.
 - `assets/` — tokens de color, selector de idioma y traducciones.
 - `design/og.html` — fuente de la tarjeta para compartir; se exporta a `images/web/og.jpg`.
+- `legal.html` — aviso de privacidad, condiciones, cancelación y reclamaciones (en inglés).
 - `404.html` — página de error de GitHub Pages.
 - `robots.txt` y `sitemap.xml` — para los buscadores. Si cambia el dominio, hay que actualizarlos.
 - `.opencode/skills/svr-web/` — sistema de diseño y brief de fotos para la IA.

@@ -21,7 +21,7 @@
 - [ ] Horario
 - [ ] Número de registro de la empresa
 - [ ] Servicios que ofrecen de verdad y precios «desde»
-- [ ] Garantía (cuánto tiempo y qué cubre)
+- [ ] Garantía (cuánto tiempo y qué cubre). El hero dice «guaranteed in writing»: si no se puede cumplir, hay que cambiarlo.
 - [ ] ¿Coche de cortesía? ¿Recogida y entrega?
 - [ ] ¿Tratan con aseguradoras (accidentes que no fueron culpa del cliente)?
 - [ ] ¿Ofrecen inspección antes de comprar coche usado? ¿Precio? ¿Tienen medidor de pintura?
@@ -42,6 +42,19 @@
 - [ ] Sustituir las 6 tarjetas de ejemplo de la galería «Trabajos recientes»
 - [ ] Enlace a su perfil de Google con reseñas
 - [ ] Reseñas reales (ahora son de ejemplo)
+
+## Cumplimiento legal (Jersey)
+
+- [ ] Registro en la Oficina del Comisionado de Información (JOIC). Es obligatorio antes de tratar datos y cuesta 70 £ al año con menos de 10 empleados. Sin registro se comete un delito.
+- [ ] Nombre legal de la empresa y número de registro de nombre comercial (Registration of Business Names (Jersey) Law 1956).
+- [ ] Número de compañía, si es sociedad limitada.
+- [ ] Número de registro de GST (o confirmar que no están obligados: umbral de 300.000 £).
+- [ ] Confirmar que los precios que se publican incluyen el GST del 5 %.
+- [ ] Condiciones de la garantía: años, qué cubre y qué no.
+- [ ] Plazos de conservación de datos (consultas, clientes, fotos).
+- [ ] Persona y datos de contacto para reclamaciones.
+- [ ] Revisión por un abogado de Jersey de `legal.html` antes de publicar de verdad.
+- [ ] Decidir si el aviso legal se traduce; si se traduce, indicar que prevalece la versión inglesa.
 
 ## Decisiones que necesitan cuenta o dinero (preguntar antes)
 
