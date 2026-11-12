@@ -524,5 +524,19 @@
  "Small dent in a car-park door.": "Pequeno amolgado na porta, de estacionamento.",
  "Scratches along one side from a hedge.": "Riscos num lado por uma sebe.",
  "Scuffed bumper.": "Para-choques riscado.",
- "Rust bubbles near a wheel arch or sill.": "Bolhas de ferrugem junto a uma caixa de roda ou soleira."
+ "Rust bubbles near a wheel arch or sill.": "Bolhas de ferrugem junto a uma caixa de roda ou soleira.",
+ "Recent work": "Trabalhos recentes",
+ "A few jobs from the workshop. These are example entries until SVR’s own photos arrive.": "Alguns trabalhos da oficina. São exemplos até chegarem as fotografias da própria SVR.",
+ "Example": "Exemplo",
+ "Rear quarter repair": "Reparação do quarto traseiro",
+ "Door dent": "Amolgado na porta",
+ "Machine polish": "Polimento à máquina",
+ "Colour match": "Igualação de cor",
+ "[3 days] · [model]": "[3 dias] · [modelo]",
+ "[1 to 2 days] · [model]": "[1 a 2 dias] · [modelo]",
+ "[Same day] · [model]": "[No mesmo dia] · [modelo]",
+ "[1 day] · [model]": "[1 dia] · [modelo]",
+ "[2 days] · [model]": "[2 dias] · [modelo]",
+ "[1 week] · [model]": "[1 semana] · [modelo]",
+ "Example entries. Replace with real jobs: photo, car, damage, time and the owner’s permission.": "Entradas de exemplo. Substituir por trabalhos reais: foto, carro, dano, tempo e autorização do proprietário."
 }
