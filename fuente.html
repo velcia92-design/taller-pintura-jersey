@@ -364,6 +364,33 @@ input:focus,textarea:focus{border-color:var(--gold);outline:none}
 .thumbs img{width:100%;height:100%;object-fit:cover;border-radius:10px;display:block}
 .thumbs button{position:absolute;top:-8px;right:-8px;width:28px;height:28px;border-radius:50%;border:0;background:#fff;color:#000;font:700 16px/1 sans-serif;cursor:pointer}
 .ok{display:none;background:#0f3d2a;padding:14px 18px;border-radius:12px}
+/* booking slot picker */
+.cg>*,form>*{min-width:0}
+.slot .hint{margin:0 0 10px}
+.days{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 2px 12px;margin:0 -2px}
+.day{flex:none;scroll-snap-align:start;width:78px;border:2px solid rgba(255,255,255,.35);border-radius:14px;background:rgba(255,255,255,.08);color:#fff;font:inherit;cursor:pointer;padding:0 0 10px;overflow:hidden;text-align:center;min-height:0}
+.day i{display:block;height:10px;background:var(--sw,#fff);margin-bottom:8px}
+.day small{display:block;font-size:.8rem;opacity:.85;text-transform:capitalize}
+.day b{display:block;font:800 1.7rem/1.1 var(--head)}
+.day:disabled{opacity:.3;cursor:not-allowed}
+.day[aria-checked=true]{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 0 0 3px var(--gold)}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:8px;margin-top:6px}
+.tm{border:2px solid rgba(255,255,255,.35);border-radius:12px;background:rgba(255,255,255,.08);color:#fff;font:700 1rem var(--head);cursor:pointer;padding:10px 0;min-height:48px}
+.tm[aria-checked=true]{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 0 0 3px var(--gold)}
+.day:focus-visible,.tm:focus-visible{outline:3px solid #6db3ff;outline-offset:2px}
+.pick{margin:10px 0 0;font-weight:800;font-size:1.1rem;min-height:1.6em}
+.slot-err{display:none;margin:6px 0 0;background:#5a1a1a;border-radius:10px;padding:10px 14px}
+.slot.bad .slot-err{display:block}
+.work{border:0;padding:0;margin:0}.work legend{font-weight:700;margin-bottom:8px;padding:0}
+.jobs{display:flex;flex-wrap:wrap;gap:8px}
+.chip{margin:0;padding:11px 16px;border:2px solid rgba(255,255,255,.35);border-radius:999px;cursor:pointer;font-weight:700;background:rgba(255,255,255,.08)}
+.vh:checked+.chip{background:#fff;color:var(--ink);border-color:#fff}
+.vh:focus-visible+.chip{outline:3px solid #6db3ff;outline-offset:2px}
+.calbox{display:none;background:#0f3d2a;padding:18px;border-radius:12px}
+.calbox h3{margin:0 0 4px}.calbox p{margin:0 0 12px;color:#d7ece8}
+.calbtns{display:grid;gap:10px}@media(min-width:560px){.calbtns{grid-template-columns:1fr 1fr}}
+.calbtns .btn{text-align:center}
+
 .card{background:rgba(8,9,11,.35);border-radius:18px;padding:26px}
 .card h3{margin-bottom:10px}
 .card p{margin:0 0 .6em;color:#e3f1ef}
@@ -681,7 +708,26 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
    <div><label for="r">Car make and model</label><input id="r" name="car" placeholder="e.g. Volkswagen Golf"></div>
    <div class="two"><div><label for="n">Your name</label><input id="n" name="name" autocomplete="name" required></div><div><label for="p">Phone</label><input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div></div>
    <div><label for="d">What happened?</label><textarea id="d" name="damage" rows="3" placeholder="e.g. scraped the rear door in a car park"></textarea></div>
-   <div><label for="pd">Preferred drop-off day (optional)</label><input id="pd" name="date" type="date"></div>
+   <div class="slot" id="slot">
+    <label id="slotl">Pick your drop-off day and time</label>
+    <p class="hint">We confirm your slot on WhatsApp.</p>
+    <div class="days" id="days" role="radiogroup" aria-labelledby="slotl"></div>
+    <div class="times" id="times" role="radiogroup" aria-label="Time of day"></div>
+    <p class="pick" id="pick" aria-live="polite"></p>
+    <p class="slot-err" id="sloterr" role="alert">Please pick a day and a time.</p>
+   </div>
+   <fieldset class="work"><legend>What kind of work?</legend>
+    <div class="jobs">
+     <input class="vh" type="radio" name="job" id="j1" value="Scratches"><label class="chip" for="j1">Scratches</label>
+     <input class="vh" type="radio" name="job" id="j2" value="Dents"><label class="chip" for="j2">Dents</label>
+     <input class="vh" type="radio" name="job" id="j3" value="Bumpers"><label class="chip" for="j3">Bumpers</label>
+     <input class="vh" type="radio" name="job" id="j4" value="Respray"><label class="chip" for="j4">Respray</label>
+     <input class="vh" type="radio" name="job" id="j5" value="Rust"><label class="chip" for="j5">Rust</label>
+     <input class="vh" type="radio" name="job" id="j6" value="Accident repair"><label class="chip" for="j6">Accident repair</label>
+     <input class="vh" type="radio" name="job" id="j7" value="Polishing"><label class="chip" for="j7">Polishing</label>
+     <input class="vh" type="radio" name="job" id="j8" value="Car Check"><label class="chip" for="j8">Car Check</label>
+     <input class="vh" type="radio" name="job" id="j9" value="Not sure yet"><label class="chip" for="j9">Not sure yet</label>
+    </div></fieldset>
       <div class="ph"><label id="phl" for="ph">Photos of the damage (optional)</label>
     <input id="ph" class="vh" type="file" accept="image/*" multiple>
     <label class="photobtn" for="ph">Add photos</label>
@@ -693,6 +739,8 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
    <div class="ok" id="ok" role="status">WhatsApp is opening with your message. Add photos of the damage in the chat, then press send.</div>
    <div class="ok" id="ok2" role="status">Shared. Make sure you pressed send in WhatsApp.</div>
    <div class="ok" id="ok3" role="status">Email cannot attach photos from this page. Please add them in your email app.</div>
+   <div class="calbox" id="cal"><h3>Add it to your calendar</h3><p>So you do not forget your drop-off.</p>
+    <div class="calbtns"><a class="btn" id="gcal" target="_blank" rel="noopener" href="#">Add to Google Calendar</a><a class="btn ghost" id="ics" href="#">Download for iPhone and other calendars</a></div></div>
   </form>
  </div>
  <div>
@@ -773,10 +821,47 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
  function msg(){
   function v(id){return (document.getElementById(id).value||'').trim()}
   function L(s){return window.SVR_T?window.SVR_T(s):s}
-  return L('Hello SVR, I would like a free estimate.')+'\n'+
-   L('Registration')+': '+(v('g')||'-')+'\n'+L('Car')+': '+(v('r')||'-')+'\n'+L('Name')+': '+v('n')+'\n'+L('Phone')+': '+v('p')+'\n'+L('What happened')+': '+(v('d')||'-')+'\n'+L('Preferred drop-off')+': '+(v('pd')||'-');
+  return L('Hello SVR, I would like to book a drop-off and get a free estimate.')+'\n'+
+   L('Registration')+': '+(v('g')||'-')+'\n'+L('Car')+': '+(v('r')||'-')+'\n'+L('Name')+': '+v('n')+'\n'+L('Phone')+': '+v('p')+'\n'+L('Type of work')+': '+(job()?L(job()):'-')+'\n'+L('What happened')+': '+(v('d')||'-')+'\n'+L('Drop-off')+': '+pickText()+'\n'+L('Add to calendar')+': '+gcalUrl();
  }
  var form=document.getElementById('f');
+
+ /* Booking: day + time picker. No server. Opening hours are placeholders: replace with SVR's real ones. */
+ var HOURS={1:[8.5,17.5],2:[8.5,17.5],3:[8.5,17.5],4:[8.5,17.5],5:[8.5,17.5],6:[8.5,12.5]}, STEP=0.5, DAYS_AHEAD=21, CLOSED_DATES=[]; /* CLOSED_DATES: ['2026-12-25'] */
+ var SW=['#e0563b','#e0a526','#3aa76d','#2f7de1','#7a4bd8','#d8479a','#17a2b8'];
+ var chosen={d:null,t:null},daysBox=document.getElementById('days'),timesBox=document.getElementById('times'),pickEl=document.getElementById('pick'),slotEl=document.getElementById('slot');
+ function pad(n){return (n<10?'0':'')+n}
+ function ymd(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+ function lg(){return document.documentElement.lang||'en'}
+ function fmt(d,o){try{return new Intl.DateTimeFormat(lg(),o).format(d)}catch(e){return new Intl.DateTimeFormat('en-GB',o).format(d)}}
+ function hhmm(x){return pad(Math.floor(x))+':'+pad(Math.round((x%1)*60))}
+ function slotsFor(d){var hr=HOURS[d.getDay()];if(!hr||CLOSED_DATES.indexOf(ymd(d))>=0)return[];var out=[];for(var t=hr[0];t<hr[1]-STEP+0.001;t+=STEP)out.push(t);return out}
+ function job(){var c=document.querySelector('input[name=job]:checked');return c?c.value:''}
+ function pickText(){if(!chosen.d)return '-';return fmt(chosen.d,{weekday:'long',day:'numeric',month:'long'})+', '+hhmm(chosen.t)}
+ function stamp(d,t){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(Math.floor(t))+pad(Math.round((t%1)*60))+'00'}
+ function evTitle(){return tt('SVR: drop off your car')}
+ function gcalUrl(){if(!chosen.d||chosen.t==null)return '-';
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(evTitle())+'&dates='+stamp(chosen.d,chosen.t)+'/'+stamp(chosen.d,chosen.t+STEP)+'&ctz=Europe%2FLondon&details='+encodeURIComponent('SVR, Jersey')}
+ function icsText(){var now=new Date(),z=now.getUTCFullYear()+pad(now.getUTCMonth()+1)+pad(now.getUTCDate())+'T'+pad(now.getUTCHours())+pad(now.getUTCMinutes())+pad(now.getUTCSeconds())+'Z';
+  return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//SVR//Booking//EN','BEGIN:VEVENT','UID:'+z+'-'+Math.random().toString(36).slice(2)+'@svr','DTSTAMP:'+z,'DTSTART:'+stamp(chosen.d,chosen.t),'DTEND:'+stamp(chosen.d,chosen.t+STEP),'SUMMARY:'+evTitle(),'LOCATION:SVR\\, Jersey','BEGIN:VALARM','TRIGGER:-PT1H','ACTION:DISPLAY','DESCRIPTION:'+evTitle(),'END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n')}
+ function renderPick(){pickEl.textContent=chosen.d&&chosen.t!=null?tt('Your slot')+': '+pickText():''}
+ function renderTimes(){timesBox.innerHTML='';if(!chosen.d)return;
+  slotsFor(chosen.d).forEach(function(t){var b=document.createElement('button');b.type='button';b.className='tm';b.setAttribute('role','radio');b.setAttribute('aria-checked',chosen.t===t?'true':'false');b.textContent=hhmm(t);
+   b.addEventListener('click',function(){chosen.t=t;slotEl.classList.remove('bad');renderTimes();renderPick()});timesBox.appendChild(b)})}
+ function renderDays(){daysBox.innerHTML='';var base=new Date();base.setHours(0,0,0,0);
+  for(var i=1;i<=DAYS_AHEAD;i++){var d=new Date(base);d.setDate(base.getDate()+i);
+   (function(d){var b=document.createElement('button');b.type='button';b.className='day';b.setAttribute('role','radio');
+    var open=slotsFor(d).length>0;b.disabled=!open;b.setAttribute('aria-checked',chosen.d&&ymd(chosen.d)===ymd(d)?'true':'false');
+    b.style.setProperty('--sw',SW[d.getDay()]);
+    b.setAttribute('aria-label',fmt(d,{weekday:'long',day:'numeric',month:'long'}));
+    b.innerHTML='<i></i><small>'+fmt(d,{weekday:'short'})+'</small><b>'+d.getDate()+'</b><small>'+fmt(d,{month:'short'})+'</small>';
+    b.addEventListener('click',function(){if(!chosen.d||ymd(chosen.d)!==ymd(d))chosen.t=null;chosen.d=d;slotEl.classList.remove('bad');renderDays();renderTimes();renderPick()});
+    daysBox.appendChild(b)})(d)}}
+ function slotOk(){if(chosen.d&&chosen.t!=null){slotEl.classList.remove('bad');return true}slotEl.classList.add('bad');slotEl.scrollIntoView({behavior:'smooth',block:'center'});return false}
+ function showCal(){var c=document.getElementById('cal');document.getElementById('gcal').href=gcalUrl();c.style.display='block'}
+ document.getElementById('ics').addEventListener('click',function(e){e.preventDefault();if(!chosen.d||chosen.t==null)return;
+  var blob=new Blob([icsText()],{type:'text/calendar;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='svr-booking.ics';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)});
+ renderDays();
  var photos=[],MAX=5,thumbs=document.getElementById('thumbs'),phn=document.getElementById('phn'),input=document.getElementById('ph');
  function tt(s){return window.SVR_T?window.SVR_T(s):s}
  var hint0=phn.textContent;
@@ -793,20 +878,20 @@ footer.foot{background:#050607;color:#9db3b8;padding:30px 0;font-size:.92rem}
   Array.prototype.forEach.call(input.files,function(f){if(photos.length<MAX)photos.push(f);else over=true});
   input.value='';draw();
   phn.dataset.over=over?'1':'';phn.textContent=over?tt('You can add up to 5 photos.'):tt(hint0)});
- document.addEventListener('svrlang',function(){draw();phn.textContent=tt(phn.dataset.over?'You can add up to 5 photos.':hint0)});
+ document.addEventListener('svrlang',function(){renderDays();renderTimes();renderPick();draw();phn.textContent=tt(phn.dataset.over?'You can add up to 5 photos.':hint0)});
  function hide(){['ok','ok2','ok3'].forEach(function(i){document.getElementById(i).style.display='none'})}
  function show(i){hide();document.getElementById(i).style.display='block'}
  function viaLink(){
-  window.open('https://wa.me/'+SVR_WHATSAPP+'?text='+encodeURIComponent(msg()),'_blank','noopener');show('ok')}
- form.addEventListener('submit',function(e){e.preventDefault();
+  window.open('https://wa.me/'+SVR_WHATSAPP+'?text='+encodeURIComponent(msg()),'_blank','noopener');show('ok');showCal()}
+ form.addEventListener('submit',function(e){e.preventDefault();if(!slotOk())return;
   /* With photos on a phone: open the share sheet (WhatsApp) with the message and photos attached. Otherwise: wa.me link. */
   if(photos.length&&navigator.canShare&&navigator.canShare({files:photos})){
-   navigator.share({text:msg(),files:photos}).then(function(){show('ok2')}).catch(function(err){if(!err||err.name!=='AbortError')viaLink()});
+   navigator.share({text:msg(),files:photos}).then(function(){show('ok2');showCal()}).catch(function(err){if(!err||err.name!=='AbortError')viaLink()});
    return}
   viaLink()});
  document.getElementById('mail').addEventListener('click',function(e){e.preventDefault();
-  if(!form.reportValidity())return;
-  if(photos.length)show('ok3');location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent(window.SVR_T?window.SVR_T('Estimate request'):'Estimate request')+'&body='+encodeURIComponent(msg())});
+  if(!form.reportValidity()||!slotOk())return;
+  if(photos.length)show('ok3');showCal();location.href='mailto:'+SVR_EMAIL+'?subject='+encodeURIComponent(window.SVR_T?window.SVR_T('Estimate request'):'Estimate request')+'&body='+encodeURIComponent(msg())});
 })();
 </script>
 </body>
