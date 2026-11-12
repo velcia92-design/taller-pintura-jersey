@@ -83,3 +83,5 @@ entre `[ ]`. No es la versión definitiva: antes de darla por buena hay que comp
 - Se sube la propia rama y se abre un Pull Request hacia `main`. Al unirlo, la web se publica sola en 1–3 minutos.
 - Nadie hace `git push` directo a `main`.
 - **El título del Pull Request dice quién hizo qué, en español simple y sin código.** Ejemplos: «Gabriel agregó el botón verde de Pedir presupuesto», «Vicente cambió las fotos de la página de servicios». Así el correo de aviso se entiende sin abrir nada. Quien use Claude le pide: «escribe el título y la descripción del Pull Request en palabras simples, como si se lo explicaras a alguien que no programa».
+
+> Nota de prueba: sirve para comprobar los avisos. Se puede borrar.
