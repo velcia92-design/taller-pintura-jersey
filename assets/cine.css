@@ -1,0 +1,58 @@
+/* Versión «cine» de la portada (maqueta-cine.html).
+   Va encima de los estilos de fuente.html: misma página, mismas funciones, otro aspecto.
+   Para volver al aspecto normal basta con quitar este archivo. */
+:root{--cine-bg:#08090b;--cine-2:#111419;--cine-3:#181c23;--cine-txt:#eef0f3;--cine-muted:#9aa4b1;--cine-line:rgba(255,255,255,.12);--muted:#9aa4b1;--line:rgba(255,255,255,.12);--glass:#111419}
+body{background:var(--cine-bg);color:var(--cine-txt)}
+body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* Titulares grandes y estrechos, como cartel de cine */
+h2{font-size:clamp(2.6rem,9vw,5.6rem);font-weight:900;font-stretch:75%;text-transform:uppercase;line-height:.92;letter-spacing:-.01em}
+h3{font-stretch:85%}
+.intro p,.note,.more,.crash p,.std p,.tip p,details p,.track p,.stats span,.job small{color:var(--cine-muted)}
+
+/* Portada */
+.hero .bg{left:0!important;-webkit-mask-image:none!important;mask-image:none!important}
+.hero .bg img{animation:kb 2.8s var(--ease) both,cinezoom 22s 2.8s ease-in-out infinite alternate;filter:brightness(.8) contrast(1.12) saturate(.9)}
+@keyframes cinezoom{from{transform:scale(1)}to{transform:scale(1.12) translate(-1.5%,-1.5%)}}
+.hero::after{background:linear-gradient(180deg,rgba(8,9,11,.6) 0%,rgba(8,9,11,.1) 30%,rgba(8,9,11,.75) 62%,#08090b 100%)}
+.hero h1{font-size:clamp(3.2rem,13vw,9rem);font-weight:900;font-stretch:72%;text-transform:uppercase;line-height:.88;letter-spacing:-.02em}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font:700 .78rem var(--head)}
+.hero .w::before,.hero .w::after{content:none}
+
+/* Cintas inclinadas */
+.trustbar{background:var(--cine-2)}
+.marq{transform:rotate(-2deg);margin:18px -12px;position:relative;z-index:3;box-shadow:0 14px 40px rgba(0,0,0,.6);font:900 clamp(1.4rem,4.4vw,2.2rem) var(--head);font-stretch:78%;text-transform:uppercase;padding:18px 0}
+.marq i{background:#fff!important;width:8px;height:8px;opacity:.7}
+
+/* Secciones claras pasan a oscuras */
+.crash{background:var(--cine-2);border-top-color:var(--cine-line)}
+.crash .steps4 li{background:var(--cine-3);border-color:var(--cine-line)}
+.more b{color:var(--cine-txt)}
+.more a{background:var(--cine-3);border-color:var(--cine-line)}
+.job{background:var(--cine-2);border-color:var(--cine-line)}
+.tip{background:var(--cine-2)}
+.std{border-top-color:var(--cine-txt)}
+.stats{background:var(--cine-bg);border-top:1px solid var(--cine-line);border-bottom:1px solid var(--cine-line)}
+.stats b{color:var(--cine-txt);font-size:clamp(3.6rem,13vw,7rem);font-weight:900;font-stretch:72%}
+.stats span{text-transform:uppercase;letter-spacing:.18em;font:700 .75rem var(--head)}
+.par li{background:var(--cine-3)}
+.igcard{background:var(--cine-2);box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.igcard header{color:var(--cine-txt);background:var(--cine-3)}
+details{border-bottom-color:var(--cine-line)}
+.skip{color:#08090b}
+.c{border-radius:6px}
+.c img{filter:saturate(.9) contrast(1.08)}
+
+/* Trabajos recientes como mazo de polaroids (lo arma cine.js) */
+.deckwrap{display:grid;gap:22px;justify-items:center;margin-top:34px}
+.deck{position:relative;width:min(100%,430px);aspect-ratio:4/5.2;touch-action:pan-y;cursor:grab;user-select:none}
+.deck .job{position:absolute;inset:0 6% 4% 0;background:#f6f4ef;color:#16191f;border:0;border-radius:4px;padding:12px 12px 70px;box-shadow:0 30px 60px rgba(0,0,0,.65);transition:transform .6s var(--ease),opacity .4s}
+.deck .job img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.deck .job figcaption{position:absolute;left:16px;right:16px;bottom:14px;padding:0}
+.deck .job b{font:900 1.35rem/1.05 var(--head);font-stretch:85%;text-transform:uppercase;color:#16191f}
+.deck .job small{color:#5b6672}
+.deck .ex{z-index:2}
+.deckctl{display:flex;align-items:center;gap:16px}
+.deckctl button{width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font-size:1.3rem;cursor:pointer}
+.deckctl output{font:800 1rem var(--head);letter-spacing:.1em;color:var(--cine-muted);min-width:5.5em;text-align:center}
