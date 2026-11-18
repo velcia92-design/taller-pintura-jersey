@@ -27,6 +27,7 @@ PAGES = {
     "fuente.html": "index.html",
     "services-fuente.html": "services.html",
     "car-check-fuente.html": "car-check.html",
+    "cine-fuente.html": "maqueta-cine.html",
 }
 
 LANGS = ("es", "pt", "pl", "ro")
@@ -36,7 +37,7 @@ def asset_version() -> str:
     """Short hash of the shared assets, used to bust browser caches."""
     h = hashlib.sha1()
     for name in ("assets/translations.js", "assets/tokens.css", "assets/lang.css",
-                 "assets/lang.js", "fonts/fonts.css"):
+                 "assets/lang.js", "assets/cine.css", "assets/cine.js", "fonts/fonts.css"):
         h.update((ROOT / name).read_bytes())
     return h.hexdigest()[:10]
 
